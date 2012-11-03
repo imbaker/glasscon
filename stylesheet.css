@@ -1,0 +1,98 @@
+@charset "iso-8859-1";
+.venue	 		{  	background-color: #C7DCFE; 
+				color: #000000; 
+				height:20px 
+			}
+.cancelledvenue 	{  	background-color: lightgrey; 
+				color: #000000; 
+				height:20px;
+				text-decoration: none 
+			}
+			
+.cancelled	{	color: red;
+			font-size: 80%;
+			font-weight: bold;
+			text-decoration: underline; 
+		}
+.month, th 		{  	font-weight: bold; 
+				color: #FFFFFF; 
+				background-color: #0099FF; 
+				font-size: small; 
+				text-align: center; 
+				height:30px 
+			}
+.title 		{	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+				font-size: 220%; 
+				font-weight: bold; 
+				color: #000066
+			}
+.fieldlabel	{	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+				font-weight: bold; 
+				color: #FFFFFF; 
+				background-color: #0099FF; 
+				font-size: 80%; 
+				text-align: left; 
+				height:30px 
+			}
+.venuelabel {  	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+				color: #000000; 
+				background-color: #C7DCFE; 
+			}
+.button 	{  	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+				color: #000000; 
+				font-weight: bold; 
+				font-size: 80%; 
+				height:20px 
+
+			}
+body			{	font-family: Georgia, Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+			}
+h1 { font-size: 100%; font-weight: bold; }
+h2 { font-size: 100%; font-weight: normal; }
+h3 			{	color: #000066}
+ul { margin: 0;
+     padding: 0; }
+li			{ list-style-image: url(ball99.gif);
+			  font-size: small;
+			  font-weight: bold;
+			  color: #000066;
+			  margin: 18px
+			}
+img			{ margin: 1em }
+img#mainHead		{ 	margin: 0em;
+				text-align: left;
+			}
+p#mainHead		{ 	color: #000066;
+				text-align: center; 
+				font-size: 105%;
+				font-weight: normal; 
+				margin: 0em;
+			}
+p 			{	font-size: small; 
+				font-weight: normal; 
+				color: #000066
+	     		  	margin: 0em 0em 0em 0em
+			}
+table 		{		font-size: small; 
+				font-weight: normal; 
+				color: #000066;
+
+			}
+a 			{	color: #333399}
+a:hover 	{	color: #333399; 
+				background-color: #FFFF99
+			}
+			
+#BottleSide {
+	float: left;
+	margin: 10px 2em 0 0;
+	padding: 1px;
+  	border: 1px grey dashed;
+  }
+			
+#BottleFront {
+	float: right;
+	margin: 10px;
+	padding: 1px;
+  	border: 1px grey dashed;
+  }
