@@ -68,10 +68,10 @@ html { overflow-y: scroll;}
 		}
 .month, th 		{  	font-weight: bold;
 				color: #FFFFFF;
-				background-color: #0099FF;
+				background-color: #4DB8FF;
 				font-size: small;
 				text-align: left;
-				padding-left: 10;
+				padding-left: 10px;
 				height:30px;
 			}
 .title 		{	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
@@ -98,8 +98,9 @@ html { overflow-y: scroll;}
 				height:20px
 			}
 
-.cost { text-align: center }
-.postage { text-align: center }
+.size { padding-left: 10px; text-align: left; }
+.cost { padding-left: 10px; text-align: left; }
+.postage { padding-left: 10px; text-align: left; }
 
 /* Contact Us page styles */
 .address 	{ margin: 0em 0em 0em 2em }
