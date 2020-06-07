@@ -16,6 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Averia+Libre' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <link type="text/css" rel="stylesheet" href="tingle.css">
 
   <script type="application/ld+json">
     {
@@ -82,6 +83,52 @@ personalities to day visitors and foreign tourists. Entry is free and access is 
 <p><font color="#808080" face="Arial, Helvetica, sans-serif" size="1">All contents &copy; <span id="currentYear"></span> Glass Constructions</font></p>
 <script language="JavaScript">
   document.getElementById('currentYear').innerHTML=new Date().getFullYear();
+</script>
+<script src="tingle.js"></script>
+<script language="JavaScript">
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  var modal = new tingle.modal({
+    footer: true,
+    closeMethods: ['overlay','button','escape'],
+  });
+
+  modal.setContent("<h1>Covid-19 Update</h1><p>During the pandemic we continue to operate as normal and are accepting orders by e-mail, text or phone.</p><p>Thank you for your support, and if you have any questions then please get in touch.</p><p>Dorothy & Nigel</p>");
+  modal.addFooterBtn('Close','tingle-btn tingle-btn--primary',function() {
+    setCookie('popup-seen', 'true', 1);
+    modal.close();
+  });
+  modal.addFooterBtn('Contact Us', 'tingle-btn tingle-btn--pull-right',function() {
+    setCookie('popup-seen', 'true', 1);
+    window.open("contactus.htm","_self")
+  });
+
+  var cookie = getCookie('popup-seen');
+  if (cookie != 'true')
+  {
+    modal.open();
+  }
 </script>
 </body>
 </html>
