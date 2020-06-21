@@ -1,11 +1,16 @@
 @charset "iso-8859-1";
 
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
 /* Header styles */
 div.header {
-	padding: 10px;
-	background: #f0f0f0;
-	margin: 10px;
-	border-radius: 40px;
+	border-top: 2px solid #000066;
+	border-bottom: 2px solid #000066;
+	margin: 10px 0;
 }
 
 ul.header {
@@ -16,30 +21,51 @@ ul.header {
 }
 
 ul.header li {
+	display: inline-block;
 	list-style-image: none;
-	float: left;
-	margin-right: 10px;
+	margin-right: 6px;
+	position: relative;
 }
 
 ul.header a {
-	text-transform: uppercase;
 	color: #000066;
 	font-size: 14px;
-	padding: 10px 15px;
-	line-height: 18px;
+	padding: 0;
 	text-decoration: none;
-	border-radius: 20px;
+	text-transform: uppercase;
 	display: block;
 }
 
-ul.header a:hover {
-	background: rgba(0,0,0,0.2);
-}
-
 ul.header a:active, ul a.active {
-	background: rgba(0,0,0,0.3);
+	background-color: #000066;
+	content: '';
+	display: block;
+	font-weight: bold;
+	height: 2px;
+	top: 0;
+	width: 100%;
 }
 
+nav ul li a::before {
+	background-color: #000066;
+	content: '';
+	display: block;
+	height: 6px;
+	position: absolute;
+	bottom: 0;
+	width: 0%;
+
+	transition: all ease-in-out 250ms;
+}
+
+nav ul li a:hover::before {
+	width: 100%;
+}
+
+nav ul li a i{
+	padding-right:10px; 
+	transition: all 0.5s ease 0s;
+}
 
 html { overflow-y: scroll;}
 
@@ -107,17 +133,34 @@ html { overflow-y: scroll;}
 .telephone 	{ margin: 0em 0em 0em 2em }
 .e-mail 	{ margin: 0em 0em 0em 2em }
 
-body		{ font-family: 'Averia Libre', cursive;
+body		{ font-family: 'Raleway', cursive;
 			  color: #000066;
 			  font-weight: normal;
 			  line-height: 175%;
 			  font-size: 18px;
 			}
 
-h1 			{ font-weight: bold; 
-			  font-size: 110%;}
-h2 			{ font-weight: normal; 
-			  font-size: 110%;}
+h1 { 
+	font-weight: bold; 
+	font-size: 110%;
+}
+
+h2 { 
+	font-family: 'Architects Daughter';
+	font-weight: bold; 
+	font-size: 140%;
+	text-align: center;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 110%;
+	margin-bottom: 0;
+}
+
+p:first-child {
+	margin-top: 0;
+}
 
 ul { margin: 0;
      padding: 0; }
@@ -126,20 +169,28 @@ li			{ color: #000066;
 			margin-left: 20px; 
 			} 
 a 			{	color: #333399}
-a:hover 	{	color: #333399;
-				background-color: #FFFF99
-			}
+
+a:hover 	{	
+	color: #333399;
+	font-weight: bold;
+}
 
 img			{ margin: 1em }
-img#mainHead		{ 	margin: 0em;
-				text-align: left;
-			}
-p#mainHead		{ 	color: #000066;
-				text-align: center;
-				font-size: 130%;
-				font-weight: normal;
-				margin: 0em;
-			}
+
+img#mainHead		{ 	
+	height: auto;
+	margin: 0em;
+	max-width: 100%;
+}
+
+p#mainHead		{
+	color: #000066;
+	text-align: center;
+	font-size: 130%;
+	font-weight: normal;
+	margin: 0em;
+}
+
 div#mainHead 	{text-align: center;}
 
 			
