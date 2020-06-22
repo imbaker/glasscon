@@ -1,9 +1,9 @@
 @charset "iso-8859-1";
 
-header::after {
-	content: '';
-	display: table;
-	clear: both;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Header styles */
@@ -13,44 +13,51 @@ div.header {
 	margin: 10px 0;
 }
 
-ul.header {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+nav {
+	width: auto;
 }
 
-ul.header li {
+nav ul {
+	background-color: #ebb000;
+	list-style: none;
+}
+
+nav ul li {
 	display: inline-block;
 	list-style-image: none;
-	margin-right: 6px;
 	position: relative;
 }
 
-ul.header a {
+nav ul li a {
 	color: #000066;
-	font-size: 14px;
-	padding: 0;
+	padding: 10px 20px;
 	text-decoration: none;
 	text-transform: uppercase;
 	display: block;
+	margin-right: -25px;
 }
 
-ul.header a:active, ul a.active {
+nav ul li a.active {
 	background-color: #000066;
-	content: '';
-	display: block;
+	color: #ebb000;
 	font-weight: bold;
-	height: 2px;
-	top: 0;
-	width: 100%;
 }
 
-nav ul li a::before {
+nav ul li a:hover {
+	background-color: #000066;
+	color: #ebb000;
+	font-weight: bold;
+}
+
+nav ul li a i{
+	padding-right:10px; 
+}	
+
+/* nav ul li a::before {
 	background-color: #000066;
 	content: '';
-	display: block;
-	height: 6px;
+	display: inline-block;
+	height: 5px;
 	position: absolute;
 	bottom: 0;
 	width: 0%;
@@ -60,12 +67,7 @@ nav ul li a::before {
 
 nav ul li a:hover::before {
 	width: 100%;
-}
-
-nav ul li a i{
-	padding-right:10px; 
-	transition: all 0.5s ease 0s;
-}
+} */
 
 html { overflow-y: scroll;}
 
@@ -136,7 +138,8 @@ html { overflow-y: scroll;}
 body		{ font-family: 'Raleway', cursive;
 			  color: #000066;
 			  font-weight: normal;
-			  line-height: 175%;
+				line-height: 175%;
+				margin: 0;
 			  font-size: 18px;
 			}
 
@@ -149,6 +152,7 @@ h2 {
 	font-family: 'Architects Daughter';
 	font-weight: bold; 
 	font-size: 140%;
+	margin-top: 0px;
 	text-align: center;
 }
 
@@ -156,10 +160,16 @@ h3 {
 	font-weight: bold;
 	font-size: 110%;
 	margin-bottom: 0;
+	margin-left: 18px;
+	margin-right: 18px;
 }
 
 p:first-child {
 	margin-top: 0;
+}
+
+p {
+	margin: 18px;
 }
 
 ul { margin: 0;
