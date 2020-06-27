@@ -25,6 +25,8 @@ nav ul {
 nav ul li {
 	display: inline-block;
 	list-style-image: none;
+	margin-left: 0;
+	margin-right: 20px;
 	position: relative;
 }
 
@@ -172,12 +174,17 @@ p {
 	margin: 18px;
 }
 
+.tingle-modal p {
+	margin: 0;
+}
+
 ul { margin: 0;
      padding: 0; }
 
 li			{ color: #000066;
 			margin-left: 20px; 
 			} 
+
 a 			{	color: #333399}
 
 a:hover 	{	
@@ -206,13 +213,12 @@ div#mainHead 	{text-align: center;}
 			
 #new	{ color: green; font-weight: bold; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; }
 
-
 #BottleSide,#Stand {
 	float: left;
-	margin: 10px 2em 0 0;
+	margin: 10px 2em 10px 18px;
 	padding: 1px;
-  	border: 1px grey dashed;
-  }
+	border: 1px grey dashed;
+}
 
 #BottleFront {
 	float: right;
@@ -220,3 +226,9 @@ div#mainHead 	{text-align: center;}
 	padding: 1px;
   	border: 1px grey dashed;
   }
+
+@media only screen and (max-width: 520px) {
+	nav ul li a {
+		padding: 10px 10px;
+	}
+}
