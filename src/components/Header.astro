@@ -1,0 +1,57 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+	<!-- Banner -->
+	<div class="flex bg-amber-500 border-b-1 border-amber-800">
+		<div class="flex flex-col basis-3/5 grow m-4">
+			<h2 class="text-5xl font-bold" >Glass Constructions</h2>
+			<h2 class="font-bold text-xl">Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
+		</div>
+		<div class="flex items-center basis-2/5 flex-row justify-end">
+			<nav>
+				<ul class="list-none">
+					<li><a href="/" class:list={[`${currentPath === '' ? 'border-blue-950 border-b-4' : ''}`, "hover:font-bold"]}><i class="fa-solid fa-home mr-1"></i>Home</a></li>
+					<li><a href="/bottleclocks" class:list={[`${currentPath === 'bottleclocks' ? 'border-blue-950 border-b-4' : ''}`, "hover:font-bold"]}><i class="fa-solid fa-wine-bottle mr-1"></i>Bottle Clocks</a></li>
+					<li><a href="/contactus" class:list={[`${currentPath === 'contactus' ? 'border-blue-950 border-b-4' : ''}`, "hover:font-bold"]}><i class="fa-solid fa-phone mr-1"></i>Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+<style>
+	h2 {
+			font-family: 'Architects Daughter';
+	}
+
+	nav ul li {
+		display: inline-block;
+		list-style-image: none;
+		margin-left: 0;
+		margin-right: 20px;
+	}
+
+	nav ul li a {
+		color: #000066;
+		padding: 10px 20px;
+		text-decoration: none;
+		display: block;
+		margin-right: -25px;
+	}
+
+	/* nav ul li a.active {
+		background-color: #0000dd;
+		color: #ebb000;
+		font-weight: bold;
+	} */
+
+
+
+img#mainHead		{
+	height: auto;
+	margin: 0em;
+	max-width: 100%;
+}
+
+div#mainHead 	{text-align: center;}
+</style>
