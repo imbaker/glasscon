@@ -2,6 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
+<div class="hidden">{currentPath}</div>
 	<!-- Banner -->
 	<div class="flex bg-amber-500 border-b-1 border-amber-800">
 		<div class="flex flex-col basis-3/5 grow m-4">
