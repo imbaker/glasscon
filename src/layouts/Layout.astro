@@ -28,9 +28,9 @@ const { title } = Astro.props;
   <link href='https://fonts.googleapis.com/css2?family=Raleway&family=Architects+Daughter&display=swap' rel='stylesheet' type='text/css'>
   <script is:inline src="https://kit.fontawesome.com/0354a9b077.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body class="w-screen text-blue-950">
 			<Header />
-			<div class="p-4">
+			<div class="p-4 pr-16">
 				<slot />
 				<Footer />
 			</div>
@@ -44,9 +44,9 @@ const { title } = Astro.props;
 	body {
 		margin: auto;
 		font-family: 'Raleway', cursive;
-		color: #000066;
 		font-weight: normal;
 		line-height: 175%;
 		font-size: 18px;
+		width: 100%
 	}
 </style>
