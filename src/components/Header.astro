@@ -1,6 +1,9 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
+var currentPath = pathname.slice(1);
+if (currentPath.endsWith('/')) {
+	currentPath = currentPath.slice(0, currentPath.length - 1);
+}
 ---
 <div class="hidden">{currentPath}</div>
 	<!-- Banner -->
