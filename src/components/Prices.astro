@@ -14,7 +14,7 @@ const prices = await fetch(url).then((response) => response.json());
   </thead>
   <tbody>
     {
-      prices.map((p) => (
+      prices.map((p: any) => (
         <tr>
           <td class="border-y border-amber-200 text-left pl-2">{p.size}</td>
           <td class="border-y border-amber-200 text-center">&pound;{p.cost}</td>
