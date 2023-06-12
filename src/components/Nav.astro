@@ -1,0 +1,40 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+var currentPath = pathname.slice(1);
+if (currentPath.endsWith("/")) {
+  currentPath = currentPath.slice(0, currentPath.length - 1);
+}
+---
+
+<div class="block lg:hidden">
+  <button
+    class="flex items-center px-3 py-2 border rounded text-blue-950 border-teal-400 hover:text-white hover:border-white"
+  >
+<svg  class="fill-current h-3 w-3"   viewBox="0 0 20 20"   xmlns="http://www.w3.org/2000/svg">
+      <title>Menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  </button>
+</div>
+<div class="w-full block lg:flex lg:items-baseline lg:w-auto">
+  <div class="pt-10 lg:flex-grow text-blue-950">
+    <a
+      href="/"
+      class="transition ease-in-out delay-150 hover:border-b-4 block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+    >
+      Home
+    </a>
+    <a
+      href="/bottleclocks"
+      class="transition ease-in-out delay-150 hover:border-b-4 block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+    >
+      Bottle Clocks
+    </a>
+    <a
+      href="/contactus"
+      class="transition ease-in-out delay-150 hover:border-b-4 block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-8"
+    >
+      Contact Us
+    </a>
+  </div>
+</div>
