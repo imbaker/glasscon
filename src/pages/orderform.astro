@@ -1,6 +1,12 @@
 ---
 const url = new URL("prices.json", Astro.url.origin);
-const prices = await fetch(url).then((response) => response.json());
+//const prices = await fetch(url).then((response) => response.json());
+let prices: string =
+  '[{ "size": "Up to 250ml", "cost": "16.00", "postage": "1.00" }]';
+const newPrices = JSON.parse(prices);
+console.log(prices);
+
+console.log(prices);
 const pricesString = JSON.stringify(prices);
 ---
 
@@ -70,9 +76,13 @@ const pricesString = JSON.stringify(prices);
       <td>
         <select
           id="size1"
-          onchange="document.getElementById('cost1').textContent = '&pound;'+size1.value;"
+          onchange="document.getElementById('cost1').textContent = '£'+size1.value;"
         >
-          {prices.map((p) => <option value={`${p.cost}`}>{p.size}</option>)}
+          {
+            newPrices.map((p: any) => (
+              <option value={`${p.cost}`}>{p.size}</option>
+            ))
+          }
         </select>
       </td>
       <td id="cost1"></td>
