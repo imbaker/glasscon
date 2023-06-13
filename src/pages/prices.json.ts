@@ -1,5 +1,9 @@
+import type { APIRoute } from "astro";
+
+export const prerender = false;
+
 // Outputs: /prices.json
-export async function get() {
+export const get: APIRoute = async () => {
   return {
     body: JSON.stringify([
       { size: "Up to 250ml", cost: "16.00", postage: "1.00" },
@@ -10,4 +14,4 @@ export async function get() {
       { size: "Champagne (75cl)", cost: "27.00", postage: "3.00" },
     ]),
   };
-}
+};
