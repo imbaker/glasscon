@@ -4,4 +4,3 @@ package="@netlify/plugin-sitemap"
 [build]
   command = "npm run build"
   publish = "dist"
-  environment = { NODE_VERSION = "16.14.0" }
