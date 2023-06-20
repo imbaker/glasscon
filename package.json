@@ -1,7 +1,8 @@
 {
   "name": "glasscon",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0-alpha",
+  "description": "Source for the Glass Constructions web-site",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
