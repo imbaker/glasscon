@@ -1,12 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout title="Contact Us">
-  <p class='font-bold text-lg'>Contact Us</p>
+  <h2>Contact Us</h2>
   <div>
     <p>You can contact Glass Constructions using the following methods:-</p>
-    <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1 w-1/2">
-      <p class="font-bold"><i class='fa-solid fa-envelope mr-1'></i>Address:</p>
+    <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1">
+      <p class="font-bold"><i class="fa-solid fa-envelope mr-1"></i>Address:</p>
       <p class="font-medium">Hillcroft</p>
       <p class="font-medium">Maidstone Road</p>
       <p class="font-medium">Danaway</p>
@@ -15,12 +16,15 @@ import Layout from '../layouts/Layout.astro';
       <p class="font-medium">ME9 7PY</p>
     </div>
   </div>
-  <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1 w-1/2">
-    <p class="font-bold"><i class='fa-solid fa-phone mr-1'></i>Telephone:</p>
+  <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1">
+    <p class="font-bold"><i class="fa-solid fa-phone mr-1"></i>Telephone:</p>
     <p class="telephone"><a href="tel:07970178233">07970 178233</a></p>
   </div>
-  <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1 w-1/2">
-    <p class="font-bold"><i class='fa-solid fa-at mr-1'></i>E-mail:</p>
-    <p class="e-mail"><a href="mailto:enquiries@glassconstructions.co.uk">enquiries@glassconstructions.co.uk</a></p>
+  <div class="md:flex flex-col bg-amber-100 rounded-xl p-4 my-1">
+    <p class="font-bold"><i class="fa-solid fa-at mr-1"></i>E-mail:</p>
+    <p class="e-mail">
+      <a href="mailto:enquiries@glassconstructions.co.uk"
+        >enquiries@glassconstructions.co.uk</a>
+    </p>
   </div>
 </Layout>

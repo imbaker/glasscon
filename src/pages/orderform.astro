@@ -1,0 +1,110 @@
+---
+const url = new URL("prices.json", Astro.url.origin);
+//const prices = await fetch(url).then((response) => response.json());
+let prices: string =
+  '[{ "size": "Up to 250ml", "cost": "16.00", "postage": "1.00" }]';
+const newPrices = JSON.parse(prices);
+console.log(prices);
+
+console.log(prices);
+const pricesString = JSON.stringify(prices);
+---
+
+<div class="ml-2 max-w-md grid grid-cols-1 gap-6">
+  <h2>Your Delivery Details</h2>
+  <label class="block">
+    <span class="text-gray-700">Name:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">Address:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">Town/City:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">County:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">Postcode:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">Contact phone:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+  <label class="block">
+    <span class="text-gray-700">Email address:</span>
+    <input
+      type="text"
+      class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+    />
+  </label>
+</div>
+
+<h2>Bottles required</h2>
+<table id="bottles" data-prices={pricesString}>
+  <thead>
+    <td>Description</td>
+    <td>Size</td>
+    <td>Cost</td>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" /></td>
+      <td>
+        <select
+          id="size1"
+          onchange="document.getElementById('cost1').textContent = '£'+size1.value;"
+        >
+          {
+            newPrices.map((p: any) => (
+              <option value={`${p.cost}`}>{p.size}</option>
+            ))
+          }
+        </select>
+      </td>
+      <td id="cost1"></td>
+    </tr>
+  </tbody>
+</table>
+
+<label class="ml-2 block">
+  <span class="text-gray-700">Delivery date:</span>
+  <input
+    type="date"
+    class="mt-1 block rounded-md w-full border-gray-300 shadow-sm"
+  />
+</label>
+<h2>Payment</h2>
+<p>We will contact you for payment once your order is ready for dispatch</p>
+
+<script>
+  const bottles = document.getElementById("bottles");
+  const prices: string = bottles?.dataset.prices ?? "";
+  const priceList = JSON.parse(prices);
+  priceList.forEach((element: string) => {
+    console.log(element);
+  });
+</script>

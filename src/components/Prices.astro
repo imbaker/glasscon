@@ -1,7 +1,8 @@
 ---
-const url = new URL('prices.json', Astro.url.origin);
-const prices = await fetch(url).then(response=>response.json());
+const url = new URL("prices.json", Astro.url.origin);
+const prices = await fetch(url).then((response) => response.json());
 ---
+
 <table class="table-auto border-collapse border border-amber-500" width="100%">
   <thead>
     <tr>
@@ -11,16 +12,22 @@ const prices = await fetch(url).then(response=>response.json());
     </tr>
   </thead>
   <tbody>
-      {prices.map(p => (
-      <tr>
-        <td class="border-y border-amber-200 text-left pl-2">{p.size}</td>
-        <td class="border-y border-amber-200 text-center">&pound;{p.cost}</td>
-        <td class="border-y border-amber-200 text-center">+&pound;{p.postage}</td>
-      </tr>
-      ))}
+    {
+      prices.map((p: any) => (
+        <tr>
+          <td class="border-y border-amber-200 text-left pl-2">{p.size}</td>
+          <td class="border-y border-amber-200 text-center">&pound;{p.cost}</td>
+          <td class="border-y border-amber-200 text-center">
+            +&pound;{p.postage}
+          </td>
+        </tr>
+      ))
+    }
     <tr>
       <td class="border-t border-amber-200 text-left pl-2">Memory bottles</td>
-      <td class="border-t border-amber-200 text-center" colspan="4">Subtract &pound;2.00 from clock prices above</td>
+      <td class="border-t border-amber-200 text-center" colspan="4"
+        >Subtract &pound;2.00 from clock prices above</td
+      >
     </tr>
   </tbody>
 </table>
