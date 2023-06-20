@@ -1,8 +1,11 @@
 {
   "name": "glasscon",
+  "private": "true",
   "type": "module",
   "version": "2.0.0-alpha",
   "description": "Source for the Glass Constructions web-site",
+  "homepage": "https://github.com/imbaker/glasscon",
+  "bugs": "https://github.com/imbaker/glasscon/issues",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
