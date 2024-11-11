@@ -4,3 +4,12 @@ obj
 
 # mstest test results
 TestResults
+
+# node modules folder
+node_modules
+
+# netlify working folder
+.netlify
+
+# dist folder
+dist/*

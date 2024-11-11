@@ -52,8 +52,8 @@ nav ul li a:hover {
 }
 
 nav ul li a i{
-	padding-right:10px; 
-}	
+	padding-right:10px;
+}
 
 /* nav ul li a::before {
 	background-color: #000066;
@@ -77,7 +77,7 @@ html { overflow-y: scroll;}
 			height: 315px;
 			margin: 0 auto;
 			float: center;
-			display: block; 
+			display: block;
 		}
 
 .venue	 		{  	background-color: #C7DCFE;
@@ -96,14 +96,7 @@ html { overflow-y: scroll;}
 			font-weight: bold;
 			text-decoration: underline;
 		}
-.month, th 		{  	font-weight: bold;
-				color: #FFFFFF;
-				background-color: #4DB8FF;
-				font-size: small;
-				text-align: left;
-				padding-left: 10px;
-				height:30px;
-			}
+
 .title 		{	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
 				font-size: 220%;
 				font-weight: bold;
@@ -128,9 +121,18 @@ html { overflow-y: scroll;}
 				height:20px
 			}
 
-.size { padding-left: 10px; text-align: left; }
-.cost { padding-left: 10px; text-align: left; }
-.postage { padding-left: 10px; text-align: left; }
+th 		{  	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #4DB8FF;
+	text-align: left;
+	padding-left: 18px;
+	height:30px;
+}
+
+.item {
+	padding-left: 18px;
+	height: 44px
+}
 
 /* Contact Us page styles */
 .address 	{ margin: 0em 0em 0em 2em }
@@ -145,14 +147,14 @@ body		{ font-family: 'Raleway', cursive;
 			  font-size: 18px;
 			}
 
-h1 { 
-	font-weight: bold; 
+h1 {
+	font-weight: bold;
 	font-size: 110%;
 }
 
-h2 { 
+h2 {
 	font-family: 'Architects Daughter';
-	font-weight: bold; 
+	font-weight: bold;
 	font-size: 140%;
 	margin-top: 0px;
 	text-align: center;
@@ -182,19 +184,19 @@ ul { margin: 0;
      padding: 0; }
 
 li			{ color: #000066;
-			margin-left: 20px; 
-			} 
+			margin-left: 20px;
+			}
 
 a 			{	color: #333399}
 
-a:hover 	{	
+a:hover 	{
 	color: #333399;
 	font-weight: bold;
 }
 
 img			{ margin: 1em }
 
-img#mainHead		{ 	
+img#mainHead		{
 	height: auto;
 	margin: 0em;
 	max-width: 100%;
@@ -210,7 +212,7 @@ p#mainHead		{
 
 div#mainHead 	{text-align: center;}
 
-			
+
 #new	{ color: green; font-weight: bold; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; }
 
 #BottleSide,#Stand {
