@@ -1,17 +1,12 @@
-import type { APIRoute } from "astro";
-
-export const prerender = false;
-
 // Outputs: /prices.json
-export const get: APIRoute = async () => {
-  return {
-    body: JSON.stringify([
-      { size: "Up to 250ml", cost: "16.00", postage: "1.00" },
-      { size: "251ml to 350ml", cost: "18.00", postage: "1.00" },
-      { size: "351ml to 660ml", cost: "23.00", postage: "1.00" },
-      { size: "661ml to 1000ml", cost: "26.00", postage: "1.00" },
-      { size: "Over 1000ml", cost: "35.00", postage: "3.00" },
-      { size: "Champagne (75cl)", cost: "27.00", postage: "3.00" },
+export async function GET() {
+  return new Response(
+    JSON.stringify([
+      { size: "Up to 330ml", cost: "19.00" },
+      { size: "331ml to 660ml", cost: "22.00" },
+      { size: "661ml to 1000ml", cost: "29.00" },
+      { size: "Champagne (75cl)", cost: "33.00" },
+      { size: "Magnums and larger (up to 50cm tall)", cost: "38.00" },
     ]),
-  };
-};
+  )
+}
