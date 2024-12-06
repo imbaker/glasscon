@@ -51,6 +51,7 @@ nav ul li a:hover {
 	font-weight: bold;
 }
 
+/* Font Awesome */
 nav ul li a svg {
 	padding-right:10px;
 }
