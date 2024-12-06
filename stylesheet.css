@@ -51,7 +51,7 @@ nav ul li a:hover {
 	font-weight: bold;
 }
 
-nav ul li a i{
+nav ul li a svg {
 	padding-right:10px;
 }
 
