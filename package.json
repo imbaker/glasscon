@@ -11,10 +11,19 @@
   "dependencies": {
     "astro": "^5.7.5",
     "astro-embed": "^0.9.0",
-    "astro-navbar": "^2.3.9"
+    "astro-navbar": "^2.3.9",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
     "astro-icon": "^1.1.5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
