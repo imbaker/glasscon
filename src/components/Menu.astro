@@ -1,0 +1,115 @@
+---
+import { Astronav, MenuItems } from 'astro-navbar';
+import { Icon } from 'astro-icon/components';
+
+const { pathname } = Astro.url;
+---
+
+<!-- <a class={pathname.slice(1) === slug ? 'active' : ''} href={`/${slug}`}>
+  About
+</a> -->
+<Astronav>
+  <MenuItems class="lg:flex">
+    <ul style="display: flex; align-items: center;">
+      <li>
+        <a
+          class={pathname.slice(1) === '' ? 'active' : ''}
+          href="/"
+          style="display: flex; align-items: center;"
+        >
+          <Icon name="mdi:home" size="20" />
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class={pathname.slice(1) === 'bottle-clocks' ? 'active' : ''}
+          href="/bottle-clocks"
+          style="display: flex; align-items: center;"
+        >
+          <Icon name="mdi:bottle-wine" size="20" />
+          Bottle Clocks
+        </a>
+      </li>
+      <li>
+        <a
+          class={pathname.slice(1) === 'contact-us' ? 'active' : ''}
+          href="/contact-us"
+          style="display: flex; align-items: center;"
+        >
+          <Icon name="mdi:phone" size="20" />Contact Us
+        </a>
+      </li>
+    </ul>
+  </MenuItems>
+</Astronav>
+
+<style>
+  [data-icon] {
+    border-left: hidden;
+    border-right: hidden;
+    padding: 8px 8px 8px 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  nav {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: auto;
+  }
+
+  nav ul {
+    background-color: #ebb000;
+    list-style: none;
+    margin: 0;
+    padding-left: 8px;
+  }
+
+  nav ul li {
+    color: #000066;
+    font-family: var(--font-body);
+    display: inline-block;
+    list-style-image: none;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  nav ul li a {
+    color: #000066;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 8px;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    margin-left: -8px;
+    margin-right: 8px;
+  }
+
+  nav ul li a:hover {
+    background-color: #000066;
+    color: #ebb000;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    margin-left: -8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  nav ul li a.active {
+    background-color: #000066;
+    color: #ebb000;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    margin-left: -8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+</style>

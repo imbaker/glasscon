@@ -1,8 +1,20 @@
-import { defineConfig } from "astro/config";
+// @ts-check
+import { defineConfig, fontProviders } from 'astro/config';
+import icon from "astro-icon";
 
-import tailwind from "@astrojs/tailwind";
-
+// https://astro.build/config
 export default defineConfig({
-  site: "https://next.glassconstructions.co.uk",
-  integrations: [tailwind()],
+  integrations: [icon()],
+  experimental: {
+    fonts: [{
+      provider: fontProviders.google(),
+      name: "Raleway",
+      cssVariable: "--font-body"
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Architects Daughter",
+      cssVariable: "--font-headings"
+    }]
+  }
 });

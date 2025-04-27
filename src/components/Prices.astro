@@ -1,23 +1,68 @@
 ---
-const url = new URL("prices.json", Astro.url.origin);
-const prices = await fetch(url).then((response) => response.json());
+import prices from '../data/prices.json';
 ---
 
-<table class="table-auto border-collapse border border-amber-500" width="100%">
-  <thead>
-    <tr>
-      <th class="bg-amber-100">Size</th>
-      <th class="bg-amber-100">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-      prices.map((p: any) => (
-        <tr>
-          <td class="border-y border-amber-200 text-left pl-2">{p.size}</td>
-          <td class="border-y border-amber-200 text-center">&pound;{p.cost}</td>
-        </tr>
-      ))
-    }
-  </tbody>
-</table>
+<div class="table-container">
+  <table width="100%">
+    <colgroup>
+      <col style="width: 50%;" />
+      <col style="width: 50%;" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Size</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        prices.map((i) => (
+          <tr>
+            <td class="item">{i.size}</td>
+            <td class="item">&pound;{i.price}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    max-width: 800px; /* Limit the table's width */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 10px 12px; /* Reduce padding */
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #4db8ff;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .item {
+    text-align: left;
+  }
+</style>

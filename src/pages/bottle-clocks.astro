@@ -1,0 +1,177 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Prices from '../components/Prices.astro';
+import { Image, Font } from 'astro:assets';
+import clocks from '../images/clocks.jpg';
+import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
+import bottleSideSmall from '../images/Bottle-Side-Small.jpg';
+import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_158x39.fw.png';
+---
+
+<Font cssVariable="--font-headings" preload />
+<Font cssVariable="--font-body" preload />
+<Layout title="Bottle Clocks">
+  <h3>Bottle Clocks</h3>
+  <div>
+    <p style="clear: left">
+      In 2004 we tried various materials in our kiln, to see what happened, and
+      found a useful product in flattened bottles.
+    </p>
+    <Image id="Stand" src={clocks} alt="Nigel with his clocks" />
+    <p>Here's Nigel with some of his clocks at Greenwich</p>
+    <Image id="BottleFront" src={bottleFrontSmall} alt="Front Bottle" />
+    <p>
+      It took a few tries to perfect the process, but we decided we had a
+      product which could be developed and would sell. Clocks have been a
+      feature of our product range since we started, so it seemed logical to
+      make clocks from flattened bottles. The easy option is to flatten, drill,
+      add the clock movement and numbers and, bingo, you have a clock. Being
+      awkward, we wanted the original labels as well, so we spend a lot of time
+      carefully removing labels, drying them and sticking them back on when the
+      high temperature work is finished. We think the end product is worth it
+      and looks great. Here's hoping you like our functional, decorative
+      presents.
+    </p>
+    <p>
+      Variations on labelled bottle clocks are also produced. We can make clocks
+      with no labels, and a set of numbers, (best on dark bottles), memory
+      bottles, (no clock), to hang on the wall (especially good for wedding and
+      anniversary presents). Chopping boards/cheese boards can also be made and
+      these look good when the original bottle has some embossing, such as
+      Gordons and Bacardi bottles as this can be kept. There is no label on
+      these, of course, unless you want the label on the back.
+    </p>
+    <p>
+      All sorts of bottles can be used; beers, wines, spirits, mixers, olive
+      oil, Marmite!, champagne and so on. You decide.
+    </p>
+    <p>
+      All items can be posted and we can accept your bottle if you want to send
+      it to us.
+    </p>
+  </div>
+  <div style="display: flex; direction: row;">
+    <div style="margin-top: 48px;">
+      <Image id="BottleSide" src={bottleSideSmall} alt="Side Bottle" />
+    </div>
+    <div>
+      <h3 style="padding-left: 16px; margin-top: 8px;">Easy to order</h3>
+      <h4 style="padding-left: 16px;">If you know the bottle you want:</h4>
+      <ul>
+        <li>
+          Use our
+          <a href="#orderForm" class="contact-link">order form</a> to email your
+          order. We will email back to confirm receipt of order and the price and
+          to arrange payment when the bottle is ready.
+        </li>
+        <p style="text-align: center; margin-top: 8px; margin-bottom: 8px">
+          &mdash;OR&mdash;
+        </p>
+        <li>
+          Print out our
+          <a href="#orderForm" class="contact-link">order form</a> and post it to
+          us. We'll do the rest and contact you for payment when the bottle is ready
+          for dispatch.
+        </li>
+      </ul>
+      <h4 style="margin-top: 24px; padding-left: 16px;">If you have your own bottle:</h4>
+      <ul>
+        <li style="margin-bottom: 16px">
+          Print out our
+          <a href="#orderForm" class="contact-link">order form</a>, send it with
+          your bottle, and we'll flatten your bottle and contact you for payment
+          when the bottle is ready for dispatch.
+        </li>
+        </ul>
+        <p style="padding-left: 16px;">
+          If all else fails, <a href="/contact-us" class="contact-link"
+            >call or e-mail us</a
+          >, that will be fine.
+        </p>
+    </div>
+  </div>
+
+  <h3>Stock items</h3>
+  <div>
+    <p>
+      We have an ever changing stock of different bottles, from all over the
+      world, but some, such as local beers and rarer wines and spirits may not
+      always be available. Contact us if you are not sure and particularly if
+      time is of the essence. We need two weeks minimum for processing and
+      postage for non-stock items.
+    </p>
+  </div>
+
+  <h3>Prices</h3>
+  <div>
+    <p>
+      All products include 48 hour Royal Mail delivery and are boxed and
+      complete with a battery if necessary, except for export items.
+    </p>
+
+    <Prices />
+
+  </div>
+
+  <h3>Payment</h3>
+  <div>
+    <p>
+      Payment can be by bank transfer, which is preferred, or Paypal. Contact us
+      at <a
+        href="mailto:enquiries@glassconstructions.co.uk"
+        class="contact-link"
+      >
+        enquiries@glassconstructions.co.uk
+      </a> for details.
+    </p>
+    <p>
+      We do not take payment until the clock is ready to go to the customer or
+      another address.
+    </p>
+  </div>
+  <a name="orderForm">
+    <h3>Order Forms</h3>
+  </a>
+  <div>
+    <p>The order form is provided in Adobe Acrobat format.</p>
+    <p>
+      A link to download the Adobe Acrobat Reader is provided if you need to get
+      the software.
+    </p>
+    <p>
+      <a
+        href="docs/Bottle Order Form.pdf"
+        class="contact-link"
+        target="_blank"
+        type="application/pdf">Bottle Clocks Order Form</a
+      >
+    </p>
+  </div>
+
+  <p>
+    <a href="https://get.adobe.com/uk/reader/" target="_blank">
+      <Image src={getAcrobatReader} alt="Get Adobe Acrobat Reader" />
+    </a>
+  </p>
+</Layout>
+
+<style>
+  #BottleSide,
+  #Stand {
+    float: left;
+    margin: 8px;
+    padding: 1px;
+    border: 1px grey dashed;
+  }
+
+  #BottleFront {
+    float: right;
+    margin: 10px;
+    padding: 1px;
+    border: 1px grey dashed;
+  }
+
+  h4 {
+    font-weight: 600;
+  }
+</style>

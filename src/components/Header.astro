@@ -1,36 +1,21 @@
 ---
-import Nav from "./Nav.astro";
+import { Image } from 'astro:assets';
+import title from '../images/title.gif';
 ---
-
-<!-- Banner -->
-<div class="flex bg-amber-500 border-b-1 border-amber-800">
-  <div class="flex flex-col flex-shrink-0 grow m-4">
-    <h2 class="text-5xl font-bold text-blue-950">Glass Constructions</h2>
-<h2 class="font-bold text-xl text-blue-950">
-  Flattened bottles and fused glass by Dorothy and Nigel Dernley
-</h2>
-  </div>
-  <Nav />
+<div>
+  <Image src={title} alt="Dorothy &amp; Nigel Dernley" width="500" height="86" />
+  <h2>Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
 </div>
 
 <style>
-  .icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.125em;
-  }
-
-  h2 {
-    font-family: "Architects Daughter";
-  }
-
-  img#mainHead {
-    height: auto;
-    margin: 0em;
-    max-width: 100%;
-  }
-
-  div#mainHead {
+  div {
     text-align: center;
   }
+
+	h2 {
+		font-family: var(--font-headings);
+		font-weight: 1000;
+		color: #000066;
+    margin-top: 0;
+	}
 </style>

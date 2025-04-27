@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "size": "Up to 330ml",
+    "price": 19
+  },
+  {
+    "id": 2,
+    "size": "Standard 331ml to 660ml",
+    "price": 22
+  },
+  {
+    "id": 3,
+    "size": "661ml to 1000ml",
+    "price": 29
+  },
+  {
+    "id": 4,
+    "size": "Champagne (75cl)",
+    "price": 33
+  },
+  {
+    "id": 5,
+    "size": "Magnums and larger (up to 50cm tall)",
+    "price": 38
+  }
+]

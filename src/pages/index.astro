@@ -1,114 +1,61 @@
 ---
-import Layout from "../layouts/Layout.astro";
----
+import Layout from '../layouts/Layout.astro';
+import { Image, Font } from 'astro:assets';
+import dorothynigel from '../images/dorothynigel.jpg';
 
+import { YouTube } from 'astro-embed';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+<Font cssVariable="--font-headings" preload />
+<Font cssVariable="--font-body" preload />
 <Layout title="Home">
   <!-- Google Tag Manager (noscript) -->
-  <noscript
-    ><iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-5BV89NG"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"></iframe></noscript
-  >
-  <!-- End Google Tag Manager (noscript) -->
-  <img
-    class="rounded-lg hover:drop-shadow-md shadow-indigo-500/40 mt-1 mr-2 mb-1 float-left"
-    src="110_1030.JPG"
-    alt="Dorothy & Nigel Dernley"
-    height="169"
-    width="211"
-  />
-  <h2>Introduction</h2>
-  <p class="mt-1">
-    We have been working with glass since 1991, at first painting or producing
-    stained glass items. In the last few years we have moved over to the
-    exciting world of <i>warm glass</i>. This involves heating glass to the soft
-    stage, around 820&deg;C, when layers of glass will fuse together. The flat
-    sheet of glass that is produced can be used for coasters, cheese or cake
-    boards, wall plaques or included in stained glass windows. In addition the
-    flat glass can be reheated, at a lower temperature, and slumped into a mould
-    to produce dishes, bowls, or other three- dimensional items. When cool these
-    are tough and versatile items to grace any household, but they keep the
-    essential beauty of glass and by the very nature of the production process
-    are unique.
-  </p>
-  <p class="mt-1">
-    Other products we make, using similar techniques, are flattened bottle
-    clocks, for which we have a separate page, and dichroic coated glass
-    pendants and ear-rings. This eye-catching jewellery makes wonderful presents
-    for anyone.
-  </p>
-  <p class="mt-1">
-    Dorothy has developed a range of coasters, with subjects such as flowers,
-    hearts, faces, trees, fish, beach huts, random patterns, and others. All are
-    individual and not repeated.
-  </p>
-  <p class="mt-1">
-    We also make some with copper foils cutouts of hearts, butterflies,
-    dragonflies, stars etc. The shapes are a deep burnt red colour as the copper
-    changes colour with the heat.
-  </p>
-  <p class="mt-1">
-    As each item is unique a general description only will have to suffice, much
-    as wood turners can never duplicate the grain in their bowls.
-  </p>
-  <p class="mt-1">
-    Our range of items is extensive, because the patterns, sizes and colours
-    vary widely, so the best way to see them is to come and see us
-  </p>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BV89NG"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	<!-- Banner -->
+	<Image src={dorothynigel} alt="Dorothy &amp; Nigel Dernley" style="float: left;" height="169" width="211" />
+	<h3>Introduction</h3>
+	<div>
+		<p>We have been working with glass since 1991, at first painting or producing stained glass items. In the last few years we have moved over to the exciting world of <i>warm glass</i>. This involves heating glass to the soft stage, around 820&deg;C, when layers of glass will fuse together. The flat sheet of glass that is produced can be used for coasters, cheese or cake boards, wall plaques or included in stained glass windows. In addition the flat glass can be reheated, at a lower temperature, and slumped into a mould to produce dishes, bowls, or other three- dimensional items. When cool these are tough and versatile items to grace any household, but they keep the essential beauty of glass and by the very nature of the production process are unique.</p>
+		<p>Other products we make, using similar techniques, are flattened bottle clocks, for which we have a separate page, and dichroic coated glass pendants and ear-rings. This eye-catching jewellery makes wonderful presents for anyone.</p>
+		<p>Dorothy has developed a range of coasters, with subjects such as flowers, hearts, faces, trees, fish, beach huts, random patterns, and others.  All are individual and not repeated.</p>
+		<p>We also make some with copper foils cutouts of hearts, butterflies, dragonflies, stars etc.  The shapes are a deep burnt red colour as the copper changes colour with the heat.</p>
+		<p>As each item is unique a general description only will have to suffice, much as wood turners can never duplicate the grain in their bowls.</p>
+		<p>Our range of items is extensive, because the patterns, sizes and colours vary widely, so the best way to see them is to come and see us</p>
+	</div>
 
-  <h2>Where to find us</h2>
-  <p class="mt-1">
-    On many weekends we are at <a
-      target="_blank"
-      href="http://www.greenwichmarket.net"
-      >Greenwich Arts &amp; Crafts market</a
-    >, <b>but we do not have regular dates</b>. <a
-      href="contactus.htm"
-      title="Click here for information about how to contact us"
-      >Call for details</a
-    >. This weekend event, held all year round, is popular with a wide range of
-    people, from TV personalities to day visitors and foreign tourists. Entry is
-    free and access is easy via the Docklands Light Railway, rail, road or river
-    bus.
-  </p>
-  <p class="mt-1">
-    At Greenwich we only have the bottle clocks, but other products can be seen
-    at the craft collective we belong to, <a
-      href="https://www.starlingsgifts.co.uk/"
-      target="_blank">Starlings Gifts</a
-    > in Bexhill. We can also send photos if required of other items.
-  </p>
-  <div>
-    <iframe
-      class="mx-auto w-1/2 h-fit"
-      src="https://www.youtube.com/embed/RgHMpcv33PY"
-      frameborder="0"
-      allowfullscreen></iframe>
-  </div>
+	<h3>Where to find us</h3>
+	<div>
+		<p>On many weekends we are at <a target="_blank" href="http://www.greenwichmarket.net" class="contact-link">Greenwich Arts &amp; Crafts market</a>, <b>but we do not have regular dates</b>. <a href="contactus.htm" class="contact-link" title="Click here for information about how to contact us"> &mdash; call for details</a>. This weekend event, held all year round, is popular with a wide range of people, from TV
+		personalities to day visitors and foreign tourists. Entry is free and access is easy via the Docklands Light Railway, rail, road or river bus.</p>
+		<p>At Greenwich we only have the bottle clocks, but other products can be seen at the craft collective we belong to, <a href="https://www.starlingsgifts.co.uk/" target="_blank" class="contact-link">Starlings Gifts</a> in Bexhill. We can also send photos if required of other items.</p>
+		<div class="gm_video">
+			<YouTube id="RgHMpcv33PY">
+		</div>
+	</div>
 
-  <h2>Orders</h2>
-  <p class="mt-1">
-    All the products are not in stock all the time, so if you want something in
-    particular please contact us to order or confirm that we do have it
-    available. We usually need at least 10 days notice to be able to deliver.
-  </p>
-  <p class="mt-1">
-    If you are coming to see us specifically or for something special, please
-    contact us to check our stock and if anything has changed.
-  </p>
+	<h3>Orders</h3>
+	<div>
+		<p>All the products are not in stock all the time, so if you want something in particular please contact us to order or confirm that we do have it available. We usually need at least 10 days notice to be able to deliver.</p>
+		<p>If you are coming to see us specifically or for something special, please contact us to check our stock and if anything has changed.</p>
+	</div>
 
-  <h2>Payment</h2>
-  <p class="mt-1">
-    We prefer Bank transfer, as that keeps the costs down, but please contact us
-    first if ordering from outside the UK, as commission by the bank may be high
-    on non-UK orders.
-  </p>
-  <p class="mt-1">
-    Alternatively we accept credit and debit cards at Greenwich and over the
-    phone, and can take PayPal payments via PayPal.me or an invoice, as well as
-    cash, but cannot accept cards on our website.
-  </p>
-  <p class="mt-1">We can call you to take card details at an agreed time</p>
+	<h3>Payment</h3>
+	<div>
+		<p>We prefer Bank transfer, as that keeps the costs down, but please contact us first if ordering from outside the UK, as commission by the bank may be high on non-UK orders.</p>
+		<p>Alternatively we accept credit and debit cards at Greenwich and over the phone, and can take PayPal payments via PayPal.me or an invoice, as well as cash, but cannot accept cards on our website.</p>
+		<p>We can call you to take card details at an agreed time</p>
+	</div>
 </Layout>
+
+<style>
+	.gm_video {
+		margin: auto;
+		width: 50%;
+	}
+
+</style>
+

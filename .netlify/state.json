@@ -1,0 +1,21 @@
+{
+	"siteId": "38d204a0-6951-461f-8455-ff559b6c9239",
+	"geolocation": {
+		"data": {
+			"city": "Chatham",
+			"country": {
+				"code": "GB",
+				"name": "United Kingdom"
+			},
+			"subdivision": {
+				"code": "ENG",
+				"name": "England"
+			},
+			"timezone": "Europe/London",
+			"latitude": 51.4003,
+			"longitude": 0.5291,
+			"postalCode": "ME4"
+		},
+		"timestamp": 1733521394641
+	}
+}
