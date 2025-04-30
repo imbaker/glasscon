@@ -1,9 +1,13 @@
 ---
-import { Image } from 'astro:assets';
-import title from '../images/title.gif';
+import { Image, Font } from 'astro:assets';
+import title from '../images/title.png';
 ---
-<div>
-  <Image src={title} alt="Dorothy &amp; Nigel Dernley" width="500" height="86" />
+<Font cssVariable="--font-headings" preload />
+<div class="container">
+  <Image
+    src={title}
+    alt="Glass Constructions logo"
+  />
   <h2>Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
 </div>
 
@@ -18,4 +22,15 @@ import title from '../images/title.gif';
 		color: #000066;
     margin-top: 0;
 	}
+
+  @media (max-width: 600px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
 </style>

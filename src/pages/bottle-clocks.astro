@@ -51,12 +51,12 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
     </p>
   </div>
   <div style="display: flex; direction: row;">
-    <div style="margin-top: 48px;">
+    <div class="column-left">
       <Image id="BottleSide" src={bottleSideSmall} alt="Side Bottle" />
     </div>
-    <div>
-      <h3 style="padding-left: 16px; margin-top: 8px;">Easy to order</h3>
-      <h4 style="padding-left: 16px;">If you know the bottle you want:</h4>
+    <div class="column-right">
+      <h3>Easy to order</h3>
+      <h4>If you know the bottle you want:</h4>
       <ul>
         <li>
           Use our
@@ -74,7 +74,7 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
           for dispatch.
         </li>
       </ul>
-      <h4 style="margin-top: 24px; padding-left: 16px;">If you have your own bottle:</h4>
+      <h4 style="margin-top: 24px">If you have your own bottle:</h4>
       <ul>
         <li style="margin-bottom: 16px">
           Print out our
@@ -83,7 +83,7 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
           when the bottle is ready for dispatch.
         </li>
         </ul>
-        <p style="padding-left: 16px;">
+        <p>
           If all else fails, <a href="/contact-us" class="contact-link"
             >call or e-mail us</a
           >, that will be fine.
@@ -171,7 +171,57 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
     border: 1px grey dashed;
   }
 
+  #column-left {
+    margin-top: 48px;
+  }
+
+  #column-right {
+    margin-top: 48px;
+    padding-left: 0;
+  }
+
   h4 {
     font-weight: 600;
   }
+
+  @media (max-width: 600px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    #BottleSide {
+      display: none;
+    }
+
+    #Stand {
+      margin: 0 auto;
+    }
+
+    #BottleFront {
+      display: none;
+    }
+    #column-left {
+      display: none;
+    }
+
+    #column-right {
+      padding-left: 0;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      padding-left: 0;
+    }
+
+    h4 {
+      padding-left: 0;
+    }
+
+  }
+
 </style>

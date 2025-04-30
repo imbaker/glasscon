@@ -4,21 +4,19 @@ import { Icon } from 'astro-icon/components';
 
 const { pathname } = Astro.url;
 ---
-
-<!-- <a class={pathname.slice(1) === slug ? 'active' : ''} href={`/${slug}`}>
-  About
-</a> -->
 <Astronav>
-  <MenuItems class="lg:flex">
-    <ul style="display: flex; align-items: center;">
+  <MenuItems class="flex; width: 100%; padding: 0; margin: 0; background-color: #ebb000; color: #000066; font-family: var(--font-body); font-size: 18px; text-transform: uppercase;">
+    <ul style="display: flex;">
       <li>
         <a
           class={pathname.slice(1) === '' ? 'active' : ''}
           href="/"
           style="display: flex; align-items: center;"
         >
-          <Icon name="mdi:home" size="20" />
-          Home
+          <Icon name="mdi:home" />
+          <div class="label">
+            Home
+          </div>
         </a>
       </li>
       <li>
@@ -27,8 +25,10 @@ const { pathname } = Astro.url;
           href="/bottle-clocks"
           style="display: flex; align-items: center;"
         >
-          <Icon name="mdi:bottle-wine" size="20" />
-          Bottle Clocks
+          <Icon name="mdi:bottle-wine" />
+          <div class="label">
+            Bottle Clocks
+          </div>
         </a>
       </li>
       <li>
@@ -37,7 +37,10 @@ const { pathname } = Astro.url;
           href="/contact-us"
           style="display: flex; align-items: center;"
         >
-          <Icon name="mdi:phone" size="20" />Contact Us
+          <Icon name="mdi:phone" />
+          <div class="label">
+            Contact Us
+          </div>
         </a>
       </li>
     </ul>
@@ -46,26 +49,29 @@ const { pathname } = Astro.url;
 
 <style>
   [data-icon] {
-    border-left: hidden;
-    border-right: hidden;
-    padding: 8px 8px 8px 0;
+    height: 36px;
+    width: 36px;
   }
 
   .hidden {
     display: none;
   }
 
-  nav {
+  ul {
     margin-top: 16px;
     margin-bottom: 16px;
     width: auto;
   }
 
+  .label {
+    margin-left: 16px;
+  }
+
   nav ul {
     background-color: #ebb000;
     list-style: none;
-    margin: 0;
     padding-left: 8px;
+    padding-right: 8px;
   }
 
   nav ul li {
@@ -75,8 +81,9 @@ const { pathname } = Astro.url;
     list-style-image: none;
     border-left: 0px solid transparent;
     border-right: 0px solid transparent;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 8px
+    margin-left: -8px;
+    margin-right: 8px;
   }
 
   nav ul li a {
@@ -98,8 +105,7 @@ const { pathname } = Astro.url;
     border-right: 0px solid transparent;
     margin-left: -8px;
     margin-right: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
   }
 
   nav ul li a.active {
@@ -109,7 +115,12 @@ const { pathname } = Astro.url;
     border-right: 0px solid transparent;
     margin-left: -8px;
     margin-right: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
+  }
+
+  @media (max-width: 600px) {
+    nav ul li {
+      width: 33%;
+    }
   }
 </style>
