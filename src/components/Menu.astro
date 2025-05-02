@@ -3,124 +3,82 @@ import { Astronav, MenuItems } from 'astro-navbar';
 import { Icon } from 'astro-icon/components';
 
 const { pathname } = Astro.url;
+console.log('pathname', pathname);
 ---
-<Astronav>
-  <MenuItems class="flex; width: 100%; padding: 0; margin: 0; background-color: #ebb000; color: #000066; font-family: var(--font-body); font-size: 18px; text-transform: uppercase;">
-    <ul style="display: flex;">
-      <li>
-        <a
-          class={pathname.slice(1) === '' ? 'active' : ''}
-          href="/"
-          style="display: flex; align-items: center;"
-        >
-          <Icon name="mdi:home" />
-          <div class="label">
-            Home
-          </div>
-        </a>
-      </li>
-      <li>
-        <a
-          class={pathname.slice(1) === 'bottle-clocks' ? 'active' : ''}
-          href="/bottle-clocks"
-          style="display: flex; align-items: center;"
-        >
-          <Icon name="mdi:bottle-wine" />
-          <div class="label">
-            Bottle Clocks
-          </div>
-        </a>
-      </li>
-      <li>
-        <a
-          class={pathname.slice(1) === 'contact-us' ? 'active' : ''}
-          href="/contact-us"
-          style="display: flex; align-items: center;"
-        >
-          <Icon name="mdi:phone" />
-          <div class="label">
-            Contact Us
-          </div>
-        </a>
-      </li>
-    </ul>
-  </MenuItems>
-</Astronav>
+
+<nav>
+  <ul>
+    <li class={pathname.slice(1) === '' ? 'active' : ''} >
+      <a href="/"><Icon name="mdi:home" />Home</a>
+    </li><!--
+    --><li class={pathname.slice(1) === 'bottle-clocks' ? 'active' : ''}>
+      <a href="/bottle-clocks" ><Icon name="mdi:bottle-wine" />Bottle Clocks</a>
+    </li><!--
+    --><li class={pathname.slice(1) === 'contact-us' ? 'active' : ''}    >
+      <a href="/contact-us"><Icon name="mdi:phone" />Contact Us</a>
+    </li>
+  </ul>
+</nav>
 
 <style>
-  [data-icon] {
-    height: 36px;
-    width: 36px;
-  }
 
   .hidden {
     display: none;
   }
 
-  ul {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    width: auto;
-  }
-
-  .label {
-    margin-left: 16px;
-  }
-
-  nav ul {
+  nav {
     background-color: #ebb000;
-    list-style: none;
-    padding-left: 8px;
-    padding-right: 8px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
   }
 
-  nav ul li {
-    color: #000066;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     font-family: var(--font-body);
-    display: inline-block;
-    list-style-image: none;
-    border-left: 0px solid transparent;
-    border-right: 0px solid transparent;
-    padding: 8px
-    margin-left: -8px;
-    margin-right: 8px;
   }
 
-  nav ul li a {
-    color: #000066;
+  li {
+    float: left;
+  }
+
+  a {
+    display: block;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
-    padding: 8px;
-    border-left: 0px solid transparent;
-    border-right: 0px solid transparent;
-    margin-left: -8px;
-    margin-right: 8px;
+    padding: 8px 16px;
+    color: #000066;
   }
 
-  nav ul li a:hover {
+  ul li:hover a {
     background-color: #000066;
+    color: #FFD700; /* Bright gold for better visibility */
+    font-weight: bold;
+}
+ul li a:hover {
+    display: block;
+    background-color: #FFD700; /* Bright gold for hover effect */
+    color: #000066;
+}
+  ul li.active {
+    background-color: #000066;
+    padding-inline: 0;
     color: #ebb000;
-    border-left: 0px solid transparent;
-    border-right: 0px solid transparent;
-    margin-left: -8px;
-    margin-right: 8px;
-    padding: 8px;
   }
 
-  nav ul li a.active {
+  ul li.active a{
+    display: block;
     background-color: #000066;
     color: #ebb000;
-    border-left: 0px solid transparent;
-    border-right: 0px solid transparent;
-    margin-left: -8px;
-    margin-right: 8px;
-    padding: 8px;
   }
 
   @media (max-width: 600px) {
-    nav ul li {
-      width: 33%;
+    a {
+      padding: 8px 6px;
     }
   }
 </style>
