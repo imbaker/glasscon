@@ -1,3 +1,14 @@
 [build]
   command = "pnpm run build"
   publish = "dist"
+
+[[redirects]]
+  from = "/bottleclocks"
+  to = "/bottle-clocks"
+  status = 301
+
+[[redirects]]
+  from = "/contactus"
+  to = "/contact-us"
+  status = 301
+
