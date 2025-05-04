@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /alive/
+
+Sitemap: https://www.glassconstructions.co.uk/sitemap.xml
