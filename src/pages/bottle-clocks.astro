@@ -6,11 +6,14 @@ import clocks from '../images/clocks.jpg';
 import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
 import bottleSideSmall from '../images/Bottle-Side-Small.jpg';
 import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_158x39.fw.png';
+
+const description =
+  'Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.';
 ---
 
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
-<Layout title="Bottle Clocks">
+<Layout title="Bottle Clocks" description={description}>
   <h3>Bottle Clocks</h3>
   <div>
     <p style="clear: left">
@@ -50,46 +53,36 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
       it to us.
     </p>
   </div>
-  <div style="display: flex; direction: row;">
-    <div class="column-left">
-      <Image id="BottleSide" src={bottleSideSmall} alt="Side Bottle" />
-    </div>
-    <div class="column-right">
-      <h3>Easy to order</h3>
-      <h4>If you know the bottle you want:</h4>
-      <ul>
-        <li>
-          Use our
-          <a href="#orderForm" class="contact-link">order form</a> to email your
-          order. We will email back to confirm receipt of order and the price and
-          to arrange payment when the bottle is ready.
-        </li>
-        <p style="text-align: center; margin-top: 8px; margin-bottom: 8px">
-          &mdash;OR&mdash;
-        </p>
-        <li>
-          Print out our
-          <a href="#orderForm" class="contact-link">order form</a> and post it to
-          us. We'll do the rest and contact you for payment when the bottle is ready
-          for dispatch.
-        </li>
-      </ul>
-      <h4 style="margin-top: 24px">If you have your own bottle:</h4>
-      <ul>
-        <li style="margin-bottom: 16px">
-          Print out our
-          <a href="#orderForm" class="contact-link">order form</a>, send it with
-          your bottle, and we'll flatten your bottle and contact you for payment
-          when the bottle is ready for dispatch.
-        </li>
-        </ul>
-        <p>
-          If all else fails, <a href="/contact-us" class="contact-link"
-            >call or e-mail us</a
-          >, that will be fine.
-        </p>
-    </div>
-  </div>
+  <h3>Easy to order</h3>
+  <h4>If you know the bottle you want, either:</h4>
+  <ul>
+    <li style="margin-bottom: 16px">
+      Use our
+      <a href="#orderForm" class="contact-link">order form</a> to email your order.
+      We will email back to confirm receipt of order and the price and to arrange
+      payment when the bottle is ready, or
+    </li>
+    <li>
+      Print out our
+      <a href="#orderForm" class="contact-link">order form</a> and post it to us.
+      We'll do the rest and contact you for payment when the bottle is ready for
+      dispatch.
+    </li>
+  </ul>
+  <h4 style="margin-top: 24px">If you have your own bottle:</h4>
+  <ul>
+    <li style="margin-bottom: 16px">
+      Print out our
+      <a href="#orderForm" class="contact-link">order form</a>, send it with
+      your bottle, and we'll flatten your bottle and contact you for payment
+      when the bottle is ready for dispatch.
+    </li>
+  </ul>
+  <p>
+    If all else fails, <a href="/contact-us" class="contact-link"
+      >call or e-mail us</a
+    >, that will be fine.
+  </p>
 
   <h3>Stock items</h3>
   <div>
@@ -110,7 +103,6 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
     </p>
 
     <Prices />
-
   </div>
 
   <h3>Payment</h3>
@@ -190,7 +182,6 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
       height: auto;
     }
 
-
     #BottleSide {
       display: none;
     }
@@ -221,7 +212,5 @@ import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_1
     h4 {
       padding-left: 0;
     }
-
   }
-
 </style>

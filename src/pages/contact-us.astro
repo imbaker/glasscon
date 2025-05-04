@@ -2,11 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import { Font } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
+
+const description = 'Contact Glass Constructions for enquiries about our handcrafted glass items, including bottle clocks and coasters. Reach us via phone or email for more information.'
 ---
 
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
-<Layout title="Contact Us">
+<Layout title="Contact Us" description={description}>
   <h3>Contact Us</h3>
   <div>
     <p>You can contact Glass Constructions using the following methods:-</p>

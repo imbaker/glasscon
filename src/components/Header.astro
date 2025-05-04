@@ -3,13 +3,15 @@ import { Image, Font } from 'astro:assets';
 import title from '../images/title.png';
 ---
 <Font cssVariable="--font-headings" preload />
-<div class="container">
-  <Image
-    src={title}
-    alt="Glass Constructions logo"
-  />
-  <h2>Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
-</div>
+<header>
+  <div class="container">
+    <Image
+      src={title}
+      alt="Glass Constructions logo"
+    />
+    <h2>Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
+  </div>
+</header>
 
 <style>
   div {

@@ -2,15 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import { Image, Font } from 'astro:assets';
 import dorothynigel from '../images/dorothynigel.jpg';
-
 import { YouTube } from 'astro-embed';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const description = 'Welcome to Glass Constructions! Explore our unique collection of handcrafted glass items, including bottle clocks, coasters, and more. Contact us for inquiries or visit our homepage for more details.'
 ---
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
-<Layout title="Home">
+<Layout title="Home" description={description}>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BV89NG"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
