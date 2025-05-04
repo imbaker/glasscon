@@ -4,8 +4,7 @@ import Prices from '../components/Prices.astro';
 import { Image, Font } from 'astro:assets';
 import clocks from '../images/clocks.jpg';
 import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
-import bottleSideSmall from '../images/Bottle-Side-Small.jpg';
-import getAcrobatReader from '../images/Get_Adobe_Acrobat_Reader_DC_web_button_158x39.fw.png';
+import getAcrobatReader from '../images/Get-Adobe-Acrobat-Reader-badge.png';
 
 const description =
   'Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.';
@@ -127,10 +126,6 @@ const description =
   <div>
     <p>The order form is provided in Adobe Acrobat format.</p>
     <p>
-      A link to download the Adobe Acrobat Reader is provided if you need to get
-      the software.
-    </p>
-    <p>
       <a
         href="/docs/Bottle Order Form.pdf"
         class="contact-link"
@@ -139,16 +134,21 @@ const description =
       >
     </p>
   </div>
+  <div>
+    <p>
+      A link to download the Adobe Acrobat Reader is provided if you need to get
+      the software.
+    </p>
+    <p>
+      <a href="https://get.adobe.com/uk/reader/" target="_blank">
+        <Image class="AdobeReader" src={getAcrobatReader} alt="Get Adobe Acrobat Reader" />
+      </a>
+    </p>
+    </div>
 
-  <p>
-    <a href="https://get.adobe.com/uk/reader/" target="_blank">
-      <Image src={getAcrobatReader} alt="Get Adobe Acrobat Reader" />
-    </a>
-  </p>
 </Layout>
 
 <style>
-  #BottleSide,
   #Stand {
     float: left;
     margin: 8px;
@@ -182,8 +182,9 @@ const description =
       height: auto;
     }
 
-    #BottleSide {
-      display: none;
+    img.AdobeReader {
+      width: auto;
+      height: auto;
     }
 
     #Stand {
