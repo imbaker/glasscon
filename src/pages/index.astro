@@ -15,15 +15,6 @@ const description =
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
 <Layout title="Home" description={description}>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript
-    ><iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-5BV89NG"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"></iframe></noscript
-  >
-  <!-- End Google Tag Manager (noscript) -->
   <!-- Banner -->
   <Image
     class="float-left m-1"
@@ -72,19 +63,14 @@ const description =
       vary widely, so the best way to see them is to come and see us</Paragraph
     >
   </Section>
-
   <Heading3>Where to find us</Heading3>
   <Section>
     <Paragraph
       >On many weekends we are at <Link
         href="http://www.greenwichmarket.net"
         target="_blank">Greenwich Arts &amp; Crafts market</Link
-      >, <b>but we do not have regular dates</b>. <a
-        href="contactus.htm"
-        class="contact-link"
-        title="Click here for information about how to contact us"
-      >
-        &mdash; call for details</a
+      >, <b>but we do not have regular dates</b>. <Link href="/contact-us">
+        &mdash; call for details</Link
       >. This weekend event, held all year round, is popular with a wide range
       of people, from TV personalities to day visitors and foreign tourists.
       Entry is free and access is easy via the Docklands Light Railway, rail,
@@ -92,52 +78,39 @@ const description =
     >
     <Paragraph
       >At Greenwich we only have the bottle clocks, but other products can be
-      seen at the craft collective we belong to, <a
+      seen at the craft collective we belong to, <Link
         href="https://www.starlingsgifts.co.uk/"
-        target="_blank"
-        class="contact-link">Starlings Gifts</a
+        target="_blank">Starlings Gifts</Link
       > in Bexhill. We can also send photos if required of other items.</Paragraph
     >
-    <div class="gm_video">
-      <YouTube id="RgHMpcv33PY" />
-    </div>
+    <YouTube class="m-auto w-1/2" id="RgHMpcv33PY" />
+  </Section>
+  <Heading3>Orders</Heading3>
+  <Section
+    ><Paragraph
+      >All the products are not in stock all the time, so if you want something
+      in particular please contact us to order or confirm that we do have it
+      available. We usually need at least 10 days notice to be able to deliver.</Paragraph
+    >
+    <Paragraph
+      >If you are coming to see us specifically or for something special, please
+      contact us to check our stock and if anything has changed.</Paragraph
+    >
+  </Section>
 
-    <Heading3>Orders</Heading3>
-    <Section
-      ><Paragraph
-        >All the products are not in stock all the time, so if you want
-        something in particular please contact us to order or confirm that we do
-        have it available. We usually need at least 10 days notice to be able to
-        deliver.</Paragraph
-      >
-      <Paragraph
-        >If you are coming to see us specifically or for something special,
-        please contact us to check our stock and if anything has changed.</Paragraph
-      >
-    </Section>
-
-    <Heading3>Payment</Heading3>
-    <Section
-      ><Paragraph
-        >We prefer Bank transfer, as that keeps the costs down, but please
-        contact us first if ordering from outside the UK, as commission by the
-        bank may be high on non-UK orders.</Paragraph
-      >
-      <Paragraph
-        >Alternatively we accept credit and debit cards at Greenwich and over
-        the phone, and can take PayPal payments via PayPal.me or an invoice, as
-        well as cash, but cannot accept cards on our website.</Paragraph
-      >
-      <Paragraph
-        >We can call you to take card details at an agreed time</Paragraph
-      >
-    </Section>
-
-    <style>
-      .gm_video {
-        margin: auto;
-        width: 50%;
-      }
-    </style>
+  <Heading3>Payment</Heading3>
+  <Section
+    ><Paragraph
+      >We prefer Bank transfer, as that keeps the costs down, but please contact
+      us first if ordering from outside the UK, as commission by the bank may be
+      high on non-UK orders.</Paragraph
+    >
+    <Paragraph
+      >Alternatively we accept credit and debit cards at Greenwich and over the
+      phone, and can take PayPal payments via PayPal.me or an invoice, as well
+      as cash, but cannot accept cards on our website.</Paragraph
+    >
+    <Paragraph>We can call you to take card details at an agreed time</Paragraph
+    >
   </Section>
 </Layout>
