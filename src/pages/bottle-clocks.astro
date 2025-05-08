@@ -5,6 +5,11 @@ import { Image, Font } from 'astro:assets';
 import clocks from '../images/clocks.jpg';
 import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
 import getAcrobatReader from '../images/Get-Adobe-Acrobat-Reader-badge.png';
+import Heading3 from '../components/Heading3.astro';
+import Section from '../components/Section.astro';
+import Paragraph from '../components/Paragraph.astro';
+import Link from '../components/Link.astro';
+import Heading4 from '../components/Heading4.astro';
 
 const description =
   'Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.';
@@ -13,16 +18,16 @@ const description =
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
 <Layout title="Bottle Clocks" description={description}>
-  <h3>Bottle Clocks</h3>
-  <div>
-    <p style="clear: left">
+  <Heading3>Bottle Clocks</Heading3>
+  <Section>
+    <Paragraph style="clear: left">
       In 2004 we tried various materials in our kiln, to see what happened, and
       found a useful product in flattened bottles.
-    </p>
+    </Paragraph>
     <Image id="Stand" src={clocks} alt="Nigel with his clocks" />
     <p>Here's Nigel with some of his clocks at Greenwich</p>
     <Image id="BottleFront" src={bottleFrontSmall} alt="Front Bottle" />
-    <p>
+    <Paragraph>
       It took a few tries to perfect the process, but we decided we had a
       product which could be developed and would sell. Clocks have been a
       feature of our product range since we started, so it seemed logical to
@@ -33,8 +38,8 @@ const description =
       high temperature work is finished. We think the end product is worth it
       and looks great. Here's hoping you like our functional, decorative
       presents.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       Variations on labelled bottle clocks are also produced. We can make clocks
       with no labels, and a set of numbers, (best on dark bottles), memory
       bottles, (no clock), to hang on the wall (especially good for wedding and
@@ -42,110 +47,108 @@ const description =
       these look good when the original bottle has some embossing, such as
       Gordons and Bacardi bottles as this can be kept. There is no label on
       these, of course, unless you want the label on the back.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       All sorts of bottles can be used; beers, wines, spirits, mixers, olive
       oil, Marmite!, champagne and so on. You decide.
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
       All items can be posted and we can accept your bottle if you want to send
       it to us.
-    </p>
-  </div>
-  <h3>Easy to order</h3>
-  <h4>If you know the bottle you want, either:</h4>
-  <ul>
-    <li style="margin-bottom: 16px">
-      Use our
-      <a href="#orderForm" class="contact-link">order form</a> to email your order.
-      We will email back to confirm receipt of order and the price and to arrange
-      payment when the bottle is ready, or
-    </li>
-    <li>
-      Print out our
-      <a href="#orderForm" class="contact-link">order form</a> and post it to us.
-      We'll do the rest and contact you for payment when the bottle is ready for
-      dispatch.
-    </li>
-  </ul>
-  <h4 style="margin-top: 24px">If you have your own bottle:</h4>
-  <ul>
-    <li style="margin-bottom: 16px">
-      Print out our
-      <a href="#orderForm" class="contact-link">order form</a>, send it with
-      your bottle, and we'll flatten your bottle and contact you for payment
-      when the bottle is ready for dispatch.
-    </li>
-  </ul>
-  <p>
-    If all else fails, <a href="/contact-us" class="contact-link"
-      >call or e-mail us</a
-    >, that will be fine.
-  </p>
+    </Paragraph>
+  </Section>
+  <Heading3>Easy to order</Heading3>
+  <Section>
+    <Heading4>If you know the bottle you want, either:</Heading4>
+    <ul>
+      <li class="ml-5 list-disc">
+        Use our
+        <Link href="#orderForm" class="contact-link">order form</Link> to email your
+        order. We will email back to confirm receipt of order and the price and to
+        arrange payment when the bottle is ready, or
+      </li>
+      <li class="ml-5 list-disc">
+        Print out our
+        <Link href="#orderForm" class="contact-link">order form</Link> and post it
+        to us. We'll do the rest and contact you for payment when the bottle is ready
+        for dispatch.
+      </li>
+    </ul>
+    <Heading4 class="mt-8">If you have your own bottle:</Heading4>
+    <ul>
+      <li class="mb-4 ml-5 list-disc">
+        Print out our
+        <Link href="#orderForm">order form</Link>, send it with your bottle, and
+        we'll flatten your bottle and contact you for payment when the bottle is
+        ready for dispatch.
+      </li>
+    </ul>
+    <Paragraph>
+      If all else fails, <Link href="/contact-us">call or e-mail us</Link>, that
+      will be fine.
+    </Paragraph>
+  </Section>
 
-  <h3>Stock items</h3>
-  <div>
-    <p>
+  <Heading3>Stock items</Heading3>
+  <Section>
+    <Paragraph>
       We have an ever changing stock of different bottles, from all over the
       world, but some, such as local beers and rarer wines and spirits may not
       always be available. Contact us if you are not sure and particularly if
       time is of the essence. We need two weeks minimum for processing and
       postage for non-stock items.
-    </p>
-  </div>
+    </Paragraph>
+  </Section>
 
-  <h3>Prices</h3>
-  <div>
-    <p>
+  <Heading3>Prices</Heading3>
+  <Section>
+    <Paragraph>
       All products include 48 hour Royal Mail delivery and are boxed and
       complete with a battery if necessary, except for export items.
-    </p>
+    </Paragraph>
 
     <Prices />
-  </div>
+  </Section>
 
-  <h3>Payment</h3>
-  <div>
-    <p>
+  <Heading3>Payment</Heading3>
+  <Section>
+    <Paragraph>
       Payment can be by bank transfer, which is preferred, or Paypal. Contact us
-      at <a
-        href="mailto:enquiries@glassconstructions.co.uk"
-        class="contact-link"
-      >
-        enquiries@glassconstructions.co.uk
-      </a> for details.
-    </p>
-    <p>
+      at <Link href="mailto:enquiries@glassconstructions.co.uk"
+        >enquiries@glassconstructions.co.uk</Link
+      > for details.
+    </Paragraph>
+    <Paragraph>
       We do not take payment until the clock is ready to go to the customer or
       another address.
-    </p>
-  </div>
+    </Paragraph>
+  </Section>
   <a name="orderForm">
-    <h3>Order Forms</h3>
+    <Heading3>Order Forms</Heading3>
   </a>
-  <div>
-    <p>The order form is provided in Adobe Acrobat format.</p>
-    <p>
-      <a
-        href="/docs/Bottle Order Form.pdf"
-        class="contact-link"
-        target="_blank"
-        type="application/pdf">Bottle Clocks Order Form</a
+  <Section>
+    <Paragraph>The order form is provided in Adobe Acrobat format.</Paragraph>
+    <Paragraph>
+      <Link href="/docs/Bottle Order Form.pdf" target="_blank"
+        >Bottle Clocks Order Form</Link
       >
-    </p>
-  </div>
-  <div>
-    <p>
+    </Paragraph>
+  </Section>
+  <Section>
+    <Paragraph>
       A link to download the Adobe Acrobat Reader is provided if you need to get
       the software.
-    </p>
-    <p>
-      <a href="https://get.adobe.com/uk/reader/" target="_blank">
-        <Image class="AdobeReader" src={getAcrobatReader} alt="Get Adobe Acrobat Reader" />
-      </a>
-    </p>
-    </div>
-
+    </Paragraph>
+    <Paragraph>
+      <Link href="https://get.adobe.com/uk/reader/" target="_blank">
+        <Image
+          class="AdobeReader"
+          src={getAcrobatReader}
+          alt="Get Adobe Acrobat Reader"
+        />
+      </Link>
+    </Paragraph>
+  </Section>
 </Layout>
 
 <style>
@@ -170,10 +173,6 @@ const description =
   #column-right {
     margin-top: 48px;
     padding-left: 0;
-  }
-
-  h4 {
-    font-weight: 600;
   }
 
   @media (max-width: 600px) {

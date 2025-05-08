@@ -9,14 +9,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.10",
+    "@tailwindcss/vite": "^4.1.5",
+    "astro": "^5.7.12",
     "astro-embed": "^0.9.0",
     "astro-navbar": "^2.3.9",
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.1",
+    "tailwindcss": "^4.1.5"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [

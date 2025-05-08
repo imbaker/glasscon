@@ -1,38 +1,15 @@
 ---
-import { Image, Font } from 'astro:assets';
-import title from '../images/title.png';
+import { Image, Font } from "astro:assets";
+import Heading2 from "./Heading2.astro";
+import title from "../images/title.png";
 ---
+
 <Font cssVariable="--font-headings" preload />
 <header>
-  <div class="container">
-    <Image
-      src={title}
-      alt="Glass Constructions logo"
-    />
-    <h2>Flattened bottles and fused glass by Dorothy and Nigel Dernley</h2>
+  <div>
+    <Image class="mx-auto" src={title} alt="Glass Constructions logo" />
+    <Heading2
+      >Flattened bottles and fused glass by Dorothy and Nigel Dernley</Heading2
+    >
   </div>
 </header>
-
-<style>
-  div {
-    text-align: center;
-  }
-
-	h2 {
-		font-family: var(--font-headings);
-		font-weight: 1000;
-		color: #000066;
-    margin-top: 0;
-	}
-
-  @media (max-width: 600px) {
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-    }
-  }
-</style>

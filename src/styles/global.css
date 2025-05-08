@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000066;
+  --color-secondary: #ebb000;
+  --color-highlight: #ffd700;
+  --color-link: #0078d4;
+  --color-footer: #545454;
+  --font-body: var(--font-body);
+  --font-headings: var(--font-headings);
+}
+
+html {
+  font-family: --font-body;
+  color: text-primary;
+}

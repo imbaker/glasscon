@@ -2,67 +2,35 @@
 import prices from '../data/prices.json';
 ---
 
-<div class="table-container">
-  <table width="100%">
-    <colgroup>
-      <col style="width: 50%;" />
-      <col style="width: 50%;" />
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Size</th>
-        <th>Cost</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        prices.map((i) => (
-          <tr>
-            <td class="item">{i.size}</td>
-            <td class="item">&pound;{i.price}</td>
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
-</div>
-
-<style>
-  .table-container {
-    max-width: 100%;
-    overflow-x: auto;
-    margin: 20px 0;
-  }
-
-  table {
-    width: 100%;
-    table-layout: fixed;
-    max-width: 800px; /* Limit the table's width */
-    margin: 0 auto; /* Center the table */
-    border-collapse: collapse;
-    text-align: left;
-  }
-
-  th,
-  td {
-    padding: 10px 12px; /* Reduce padding */
-    border: 1px solid #ddd;
-  }
-  th {
-    background-color: #007acc;
-    color: #ffffff;
-    font-weight: bold;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-
-  .item {
-    text-align: left;
-  }
-</style>
+<table class="layout-fixed m-auto max-w-3xl border-collapse">
+  <colgroup>
+    <col class="w-1/2" />
+    <col class="w-1/2" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th
+        class="border-1 border-solid border-[#ddd] bg-[#007acc] px-3 py-2 font-bold text-white"
+        >Size</th
+      >
+      <th
+        class="border-1 border-solid border-[#ddd] bg-[#007acc] px-3 py-2 font-bold text-white"
+        >Cost</th
+      >
+    </tr>
+  </thead>
+  <tbody>
+    {
+      prices.map((i) => (
+        <tr class="even:bg-[#f9f9f9] hover:bg-[#f1f1f1]">
+          <td class="border-1 border-solid border-[#ddd] px-3 py-2 text-left">
+            {i.size}
+          </td>
+          <td class="border-1 border-solid border-[#ddd] px-3 py-2 text-center">
+            &pound;{i.price}
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

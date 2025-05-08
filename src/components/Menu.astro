@@ -6,78 +6,66 @@ const { pathname } = Astro.url;
 console.log('pathname', pathname);
 ---
 
-<nav>
-  <ul>
-    <li class={pathname.slice(1) === '' ? 'active' : ''} >
-      <a href="/"><Icon name="mdi:home" />Home</a>
+<nav class="bg-secondary sticky top-0 z-1">
+  <ul class="font-body m-0 list-none overflow-hidden p-0">
+    <li class={pathname.slice(1) === '' ? 'active' : ''} "float-left">
+      <a
+        href="/"
+        class="hover:bg-highlight hover:text-primary block px-3 py-2 uppercase decoration-0 hover:font-bold"
+        ><Icon
+          name="mdi:home"
+          class="text-primary float-left mx-2"
+          size="24"
+        />Home</a
+      >
     </li><!--
-    --><li class={pathname.slice(1) === 'bottle-clocks' ? 'active' : ''}>
-      <a href="/bottle-clocks" ><Icon name="mdi:bottle-wine" />Bottle Clocks</a>
+    -->
+    <li
+      class={pathname.slice(1) === 'bottle-clocks' ? 'active' : ''}
+      "float-left"
+    >
+      <a
+        href="/bottle-clocks"
+        class="hover:bg-highlight hover:text-primary block px-3 py-2 uppercase decoration-0 hover:font-bold"
+        ><Icon
+          name="mdi:bottle-wine"
+          class="text-primary float-left mx-2"
+          size="24"
+        />Bottle Clocks</a
+      >
     </li><!--
-    --><li class={pathname.slice(1) === 'contact-us' ? 'active' : ''}    >
-      <a href="/contact-us"><Icon name="mdi:phone" />Contact Us</a>
+    -->
+    <li class={pathname.slice(1) === 'contact-us' ? 'active' : ''} "float-left">
+      <a
+        href="/contact-us"
+        class="hover:bg-highlight hover:text-primary block px-3 py-2 uppercase decoration-0 hover:font-bold"
+        ><Icon
+          name="mdi:phone"
+          class="text-primary float-left mx-2"
+          size="24"
+        />Contact Us</a
+      >
     </li>
   </ul>
 </nav>
 
 <style>
-
   [data-icon] {
     font-size: 1.2em;
-    margin-right: 4px;
     margin-bottom: -4px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  nav {
-    background-color: #ebb000;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: var(--font-body);
   }
 
   li {
     float: left;
   }
 
-  a {
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    padding: 8px 16px;
-    color: #000066;
-  }
-
-  ul li:hover a {
-    background-color: #000066;
-    color: #FFD700; /* Bright gold for better visibility */
-    font-weight: bold;
-}
-ul li a:hover {
-    display: block;
-    background-color: #FFD700; /* Bright gold for hover effect */
-    color: #000066;
-}
   ul li.active {
     background-color: #000066;
     padding-inline: 0;
     color: #ebb000;
   }
 
-  ul li.active a{
+  ul li.active a {
     display: block;
     background-color: #000066;
     color: #ebb000;

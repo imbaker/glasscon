@@ -2,49 +2,60 @@
 import Layout from '../layouts/Layout.astro';
 import { Font } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
+import Heading3 from '../components/Heading3.astro';
+import Paragraph from '../components/Paragraph.astro';
+import Section from '../components/Section.astro';
+import AddressLine from '../components/AddressLine.astro';
+import Link from '../components/Link.astro';
 
-const description = 'Contact Glass Constructions for enquiries about our handcrafted glass items, including bottle clocks and coasters. Reach us via phone or email for more information.'
+const description =
+  'Contact Glass Constructions for enquiries about our handcrafted glass items, including bottle clocks and coasters. Reach us via phone or email for more information.';
 ---
 
 <Font cssVariable="--font-headings" preload />
 <Font cssVariable="--font-body" preload />
 <Layout title="Contact Us" description={description}>
-  <h3>Contact Us</h3>
-  <div>
-    <p>You can contact Glass Constructions using the following methods:-</p>
-    <h3>
-      <Icon name="mdi:envelope-outline" size="20" />
+  <Heading3>Contact Us</Heading3>
+  <Section>
+    <Paragraph
+      >You can contact Glass Constructions using the following methods:-</Paragraph
+    >
+    <Heading3>
+      <Icon
+        name="mdi:envelope-outline"
+        class="float-left mt-1 mr-2"
+        size="24"
+      />
       Address:
-    </h3>
-    <p>Hillcroft</p>
-    <p>Maidstone Road</p>
-    <p>Danaway</p>
-    <p>Sittingbourne</p>
-    <p>Kent</p>
-    <p>ME9 7PY</p>
-  </div>
-  <h3>
-    <Icon name="mdi:phone" size="20" />
-    Telephone:</h3>
-  <div>
-    <p><a href="tel:07970178233" class="contact-link">07970 178233</a></p>
-  </div>
-  <h3>
-    <Icon name="mdi:alternate-email" size="20" />
+    </Heading3>
+    <AddressLine>Hillcroft</AddressLine>
+    <AddressLine>Maidstone Road</AddressLine>
+    <AddressLine>Danaway</AddressLine>
+    <AddressLine>Sittingbourne</AddressLine>
+    <AddressLine>Kent</AddressLine>
+    <AddressLine>ME9 7PY</AddressLine>
+  </Section>
+  <Heading3
+    ><Icon
+      name="mdi:phone"
+      class="float-left mt-1 mr-2"
+      size="24"
+    />Telephone:</Heading3
+  >
+  <Section>
+    <Paragraph>
+      <Link href="tel:07970178233">07970 178233</Link>
+    </Paragraph>
+  </Section>
+  <Heading3>
+    <Icon name="mdi:alternate-email" size="24" class="float-left mt-1 mr-2" />
     E-mail:
-  </h3>
-  <div>
-    <p>
-      <a href="mailto:enquiries@glassconstructions.co.uk" class="contact-link">
-      enquiries@glassconstructions.co.uk
-      </a>
-    </p>
-  </div>
-
-  <style>
-    /* Adjust spacing for paragraphs */
-    p {
-      margin-bottom: 0;
-    }
-  </style>
+  </Heading3>
+  <Section>
+    <Paragraph>
+      <Link href="mailto:enquiries@glassconstructions.co.uk">
+        enquiries@glassconstructions.co.uk
+      </Link>
+    </Paragraph>
+  </Section>
 </Layout>
