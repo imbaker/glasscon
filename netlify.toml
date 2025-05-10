@@ -12,3 +12,8 @@
   to = "/contact-us"
   status = 301
 
+[[redirects]]
+  from = "/contactus.htm"
+  to = "/contact-us"
+  status = 301
+
