@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  menuTitle: string;
+  href: string;
+  menuIcon: string;
+}
+
+const { menuTitle, href, menuIcon } = Astro.props;
+
+const { pathname } = Astro.url;
+console.log('pathname', pathname);
+---
+
+<div class="flex h-full items-center">
+  <div
+    class:list={[
+      {
+        'text-primary': pathname !== href,
+        'bg-secondary': pathname !== href,
+        'text-secondary': pathname === href,
+        'bg-primary': pathname === href,
+        'hover:bg-highlight': pathname !== href,
+        'hover:text-primary': pathname !== href,
+        'hover:bg-primary': pathname === href,
+        'hover:text-highlight': pathname === href,
+        uppercase: true,
+        'px-6': true,
+        'h-full': true,
+      },
+    ]}>
+    <a href={href} class="flex gap-2 h-full items-center text-lg font-bold"
+      ><Icon name={menuIcon} class="size-8" />{menuTitle}</a
+    >
+  </div>
+</div>
