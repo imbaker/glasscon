@@ -1,12 +1,12 @@
 ---
-import { Image, Font } from "astro:assets";
-import Heading2 from "./Heading2.astro";
-import title from "../images/title.png";
+import { Image, Font } from 'astro:assets';
+import Heading2 from './Heading2.astro';
+import title from '../images/title.png';
 ---
 
 <Font cssVariable="--font-headings" preload />
 <header>
-  <div>
+  <div class="w-screen">
     <Image class="mx-auto" src={title} alt="Glass Constructions logo" />
     <Heading2
       >Flattened bottles and fused glass by Dorothy and Nigel Dernley</Heading2
