@@ -26,14 +26,14 @@ console.log('pathname', pathname);
         'hover:bg-primary': pathname === href,
         'hover:text-highlight': pathname === href,
         uppercase: true,
-        'px-3': true,
+        'p-2': true,
         'm:px-6': true,
         'h-full': true,
       },
     ]}>
     <a
       href={href}
-      class="flex gap-2 h-full items-center m:text-lg text-m font-bold"
+      class="flex gap-2 h-full items-center m:text-lg text-sm font-bold"
       ><Icon name={menuIcon} class="size-8" />{menuTitle}</a
     >
   </div>
