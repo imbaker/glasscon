@@ -12,5 +12,6 @@
 
 html {
   font-family: --font-body;
+  font-weight: 500;
   color: text-primary;
 }

@@ -15,11 +15,13 @@ export default defineConfig({
         provider: fontProviders.google(),
         name: "Raleway",
         cssVariable: "--font-body",
+        weights: ["500", "700"],
       },
       {
         provider: fontProviders.google(),
         name: "Architects Daughter",
         cssVariable: "--font-headings",
+        weights: ["400"],
       },
     ],
   },
