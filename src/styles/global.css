@@ -9,9 +9,3 @@
   --font-body: var(--font-body);
   --font-headings: var(--font-headings);
 }
-
-html {
-  font-family: --font-body;
-  font-weight: 500;
-  color: text-primary;
-}
