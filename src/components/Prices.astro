@@ -2,7 +2,7 @@
 import prices from '../data/prices.json';
 ---
 
-<table class="layout-fixed m-auto max-w-3xl border-collapse">
+<table class="m-auto max-w-3xl">
   <colgroup>
     <col class="w-1/2" />
     <col class="w-1/2" />
@@ -10,23 +10,21 @@ import prices from '../data/prices.json';
   <thead>
     <tr>
       <th
-        class="border-1 border-solid border-[#ddd] bg-[#007acc] px-3 py-2 font-bold text-white"
+        class="border border-gray-300 bg-blue-500 px-3 py-2 font-bold text-white"
         >Size</th
       >
       <th
-        class="border-1 border-solid border-[#ddd] bg-[#007acc] px-3 py-2 font-bold text-white"
+        class="border border-gray-300 bg-blue-500 px-3 py-2 font-bold text-white"
         >Cost</th
       >
     </tr>
   </thead>
-  <tbody>
+  <tbody class="rounded-b-lg">
     {
       prices.map((i) => (
-        <tr class="even:bg-[#f9f9f9] hover:bg-[#f1f1f1]">
-          <td class="border-1 border-solid border-[#ddd] px-3 py-2 text-left">
-            {i.size}
-          </td>
-          <td class="border-1 border-solid border-[#ddd] px-3 py-2 text-center">
+        <tr class="even:bg-gray-50 hover:bg-gray-200 last:rounded-b-lg">
+          <td class="border border-gray-300 px-3 py-2">{i.size}</td>
+          <td class="border rounded-br-lg border-gray-300 px-3 py-2 text-center">
             &pound;{i.price}
           </td>
         </tr>
