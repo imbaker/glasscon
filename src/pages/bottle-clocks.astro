@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Prices from '../components/Prices.astro';
-import { Image, Font } from 'astro:assets';
+import { Image } from 'astro:assets';
 import clocks from '../images/clocks.jpg';
 import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
 import getAcrobatReader from '../images/Get-Adobe-Acrobat-Reader-badge.png';
@@ -15,8 +15,6 @@ const description =
   'Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.';
 ---
 
-<Font cssVariable="--font-headings" preload />
-<Font cssVariable="--font-body" preload />
 <Layout title="Bottle Clocks" description={description}>
   <Heading3>Bottle Clocks</Heading3>
   <Section>
@@ -24,9 +22,18 @@ const description =
       In 2004 we tried various materials in our kiln, to see what happened, and
       found a useful product in flattened bottles.
     </Paragraph>
-    <Image id="Stand" src={clocks} alt="Nigel with his clocks" />
-    <p>Here's Nigel with some of his clocks at Greenwich</p>
-    <Image id="BottleFront" src={bottleFrontSmall} alt="Front Bottle" />
+    <div class="relative float-left m-3 ml-0">
+      <Image class="rounded-md" src={clocks} alt="Nigel with his clocks" />
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-gray-900 opacity-90 p-1 text-white text-sm rounded-b-md">
+        Here's Nigel with some of his clocks at Greenwich
+      </div>
+    </div>
+    <Image
+      class="mx-auto md:float-right md:m-3 rounded-md"
+      src={bottleFrontSmall}
+      alt="Front Bottle"
+    />
     <Paragraph>
       It took a few tries to perfect the process, but we decided we had a
       product which could be developed and would sell. Clocks have been a
@@ -41,8 +48,8 @@ const description =
     </Paragraph>
     <Paragraph>
       Variations on labelled bottle clocks are also produced. We can make clocks
-      with no labels, and a set of numbers, (best on dark bottles), memory
-      bottles, (no clock), to hang on the wall (especially good for wedding and
+      with no labels and a set of numbers (best on dark bottles), memory bottles
+      (no clock), to hang on the wall (especially good for wedding and
       anniversary presents). Chopping boards/cheese boards can also be made and
       these look good when the original bottle has some embossing, such as
       Gordons and Bacardi bottles as this can be kept. There is no label on
@@ -150,7 +157,7 @@ const description =
   </Section>
 </Layout>
 
-<style>
+<!-- <style>
   #Stand {
     float: left;
     margin: 8px;
@@ -213,4 +220,4 @@ const description =
       padding-left: 0;
     }
   }
-</style>
+</style> -->
