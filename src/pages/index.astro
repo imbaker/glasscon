@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Heading3 from '../components/Heading3.astro';
 import Section from '../components/Section.astro';
 import Paragraph from '../components/Paragraph.astro';
-import { Image, Font } from 'astro:assets';
+import { Image } from 'astro:assets';
 import dorothynigel from '../images/dorothynigel.jpg';
 import { YouTube } from 'astro-embed';
 import Link from '../components/Link.astro';
@@ -12,8 +12,6 @@ const description =
   'Welcome to Glass Constructions! Explore our unique collection of handcrafted glass items, including bottle clocks, coasters, and more. Contact us for inquiries or visit our homepage for more details.';
 ---
 
-<Font cssVariable="--font-headings" preload />
-<Font cssVariable="--font-body" preload />
 <Layout title="Home" description={description}>
   <!-- Banner -->
   <Image
