@@ -2,9 +2,6 @@
   command = "pnpm run build"
   publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "22.16.0"
-
 [[redirects]]
   from = "/bottleclocks"
   to = "/bottle-clocks"
