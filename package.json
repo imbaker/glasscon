@@ -25,13 +25,8 @@
     "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "pnpm": {
-    "ignoredBuiltDependencies": [
-      "esbuild"
-    ],
-    "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
-      "sharp"
-    ]
+    "ignoredBuiltDependencies": ["esbuild"],
+    "onlyBuiltDependencies": ["@tailwindcss/oxide", "sharp"]
   },
   "prettier": {
     "bracketSameLine": true
