@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/netlify": "^6.3.4",
     "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.9.2",
+    "astro": "^5.9.3",
     "astro-embed": "^0.9.0",
     "astro-navbar": "^2.3.9",
     "sharp": "^0.34.2",
@@ -26,8 +26,13 @@
     "prettier-plugin-tailwindcss": "^0.6.12"
   },
   "pnpm": {
-    "ignoredBuiltDependencies": ["esbuild"],
-    "onlyBuiltDependencies": ["@tailwindcss/oxide", "sharp"]
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "sharp"
+    ]
   },
   "prettier": {
     "bracketSameLine": true
