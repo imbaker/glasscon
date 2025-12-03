@@ -39,5 +39,5 @@
   "prettier": {
     "bracketSameLine": true
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.24.0"
 }
