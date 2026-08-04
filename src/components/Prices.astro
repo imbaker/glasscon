@@ -1,5 +1,5 @@
 ---
-import prices from '../data/prices.json';
+import prices from "../data/prices.json";
 ---
 
 <table class="m-auto max-w-3xl">
@@ -22,9 +22,9 @@ import prices from '../data/prices.json';
   <tbody class="rounded-b-lg">
     {
       prices.map((i) => (
-        <tr class="even:bg-gray-50 hover:bg-gray-200 last:rounded-b-lg">
+        <tr class="last:rounded-b-lg even:bg-gray-50 hover:bg-gray-200">
           <td class="border border-gray-300 px-3 py-2">{i.size}</td>
-          <td class="border rounded-br-lg border-gray-300 px-3 py-2 text-center">
+          <td class="rounded-br-lg border border-gray-300 px-3 py-2 text-center">
             &pound;{i.price}
           </td>
         </tr>

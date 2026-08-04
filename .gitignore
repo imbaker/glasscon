@@ -4,7 +4,8 @@ dist/
 # generated types
 .astro/
 .netlify/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 # dependencies
 node_modules/
