@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
 interface Props {
   menuTitle: string;
@@ -16,22 +16,22 @@ const { pathname } = Astro.url;
   <div
     class:list={[
       {
-        'text-primary': pathname !== href,
-        'text-secondary': pathname === href,
-        'bg-primary': pathname === href,
-        'hover:bg-highlight': pathname !== href,
-        'hover:text-primary': pathname !== href,
-        'hover:bg-primary': pathname === href,
-        'hover:text-highlight': pathname === href,
+        "text-primary": pathname !== href,
+        "text-secondary": pathname === href,
+        "bg-primary": pathname === href,
+        "hover:bg-highlight": pathname !== href,
+        "hover:text-primary": pathname !== href,
+        "hover:bg-primary": pathname === href,
+        "hover:text-highlight": pathname === href,
         uppercase: true,
-        'p-2': true,
-        'm:px-6': true,
-        'h-full': true,
+        "p-2": true,
+        "m:px-6": true,
+        "h-full": true,
         transition: true,
-        'ease-in-out': true,
+        "ease-in-out": true,
       },
     ]}>
-    <a href={href} class="flex gap-2 h-full items-center md:text-lg text-sm">
+    <a href={href} class="flex h-full items-center gap-2 text-sm md:text-lg">
       <Icon name={menuIcon} class="size-6 md:size-8" />{menuTitle}
     </a>
   </div>

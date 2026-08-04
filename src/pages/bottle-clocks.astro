@@ -1,18 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Prices from '../components/Prices.astro';
-import { Image } from 'astro:assets';
-import clocks from '../images/clocks.jpg';
-import bottleFrontSmall from '../images/Bottle-Front-Small.jpg';
-import getAcrobatReader from '../images/Get-Adobe-Acrobat-Reader-badge.png';
-import Heading3 from '../components/Heading3.astro';
-import Section from '../components/Section.astro';
-import Paragraph from '../components/Paragraph.astro';
-import Link from '../components/Link.astro';
-import Heading4 from '../components/Heading4.astro';
+import Layout from "../layouts/Layout.astro";
+import Prices from "../components/Prices.astro";
+import { Image } from "astro:assets";
+import clocks from "../images/clocks.jpg";
+import bottleFrontSmall from "../images/Bottle-Front-Small.jpg";
+import getAcrobatReader from "../images/Get-Adobe-Acrobat-Reader-badge.png";
+import Heading3 from "../components/Heading3.astro";
+import Section from "../components/Section.astro";
+import Paragraph from "../components/Paragraph.astro";
+import Link from "../components/Link.astro";
+import Heading4 from "../components/Heading4.astro";
 
 const description =
-  'Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.';
+  "Explore our unique collection of bottle clocks, handcrafted with precision. Contact us for inquiries or visit our homepage for more details.";
 ---
 
 <Layout title="Bottle Clocks" description={description}>
@@ -25,12 +25,12 @@ const description =
     <div class="relative float-left m-3 ml-0">
       <Image class="rounded-md" src={clocks} alt="Nigel with his clocks" />
       <div
-        class="absolute bottom-0 left-0 right-0 bg-gray-900 opacity-90 p-1 text-white text-sm rounded-b-md">
+        class="absolute right-0 bottom-0 left-0 rounded-b-md bg-gray-900 p-1 text-sm text-white opacity-90">
         Here's Nigel with some of his clocks at Greenwich
       </div>
     </div>
     <Image
-      class="mx-auto md:float-right md:m-3 rounded-md"
+      class="mx-auto rounded-md md:float-right md:m-3"
       src={bottleFrontSmall}
       alt="Front Bottle"
     />
@@ -74,7 +74,7 @@ const description =
         order. We will email back to confirm receipt of order and the price and to
         arrange payment when the bottle is ready, or
       </li>
-      <li class="ml-5 mb-4 list-disc">
+      <li class="mb-4 ml-5 list-disc">
         Print out our
         <Link href="#orderForm" class="contact-link">order form</Link> and post it
         to us. We'll do the rest and contact you for payment when the bottle is ready

@@ -1,12 +1,12 @@
 ---
-import MenuItem from './MenuItem.astro';
+import MenuItem from "./MenuItem.astro";
 
 const { pathname } = Astro.url;
 ---
 
-<nav class="bg-linear-to-r from-secondary to-amber-300 sticky top-0 z-1">
+<nav class="from-secondary sticky top-0 z-1 bg-linear-to-r to-amber-300">
   <div class="h-12 w-full">
-    <div class="w-full h-full flex justify-start font-body">
+    <div class="font-body flex h-full w-full justify-start">
       <MenuItem menuTitle="Home" menuIcon="mdi:home" href="/" />
       <MenuItem
         menuTitle="Bottle Clocks"

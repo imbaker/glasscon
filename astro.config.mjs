@@ -9,22 +9,20 @@ export default defineConfig({
   trailingSlash: "never",
   integrations: [icon()],
   adapter: netlify(),
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Raleway",
-        cssVariable: "--font-body",
-        weights: ["500", "700"],
-      },
-      {
-        provider: fontProviders.google(),
-        name: "Architects Daughter",
-        cssVariable: "--font-headings",
-        weights: ["400"],
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Raleway",
+      cssVariable: "--font-body",
+      weights: ["500", "700"],
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Architects Daughter",
+      cssVariable: "--font-headings",
+      weights: ["400"],
+    },
+  ],
 
   vite: {
     plugins: [tailwindcss()],
