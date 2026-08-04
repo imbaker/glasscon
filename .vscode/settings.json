@@ -2,7 +2,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.prettierPath": "node_modules/.bin/prettier",
   "prettier.enable": true,
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
