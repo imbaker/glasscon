@@ -8,6 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "up": "pnpm dlx @astrojs/upgrade",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
     "format": "prettier --config prettier.config.mjs --write .",
     "format:check": "prettier --config prettier.config.mjs --check ."
   },
@@ -22,7 +24,9 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
+    "@playwright/test": "^1.62.1",
     "astro-icon": "^1.1.5",
+    "playwright": "^1.62.1",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.14"
