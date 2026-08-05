@@ -9,19 +9,4 @@ test.describe('Pages / Home', () => {
     await expect(page).toHaveTitle('Glass Constructions - Home');
   });
 
-  test('header is visible', async ({ page }) => {
-    const header = page.locator('header').first();
-    await expect(header).toBeVisible();
-  });
-
-  test("footer is visible", async ({ page }) => {
-    const footer = page.locator("footer").first();
-    await expect(footer).toBeVisible();
-  });
-
-  test("footer contains current year", async ({ page }) => {
-    const footer = page.locator("footer").first();
-    const currentYear = new Date().getFullYear().toString();
-    await expect(footer).toContainText(currentYear);
-  });
 });

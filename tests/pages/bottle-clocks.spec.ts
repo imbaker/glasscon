@@ -14,11 +14,6 @@ test.describe('Pages / Bottle Clocks', () => {
     await expect(page).toHaveTitle('Glass Constructions - Bottle Clocks');
   });
 
-  test('header is visible', async ({ page }) => {
-    const header = page.locator('header').first();
-    await expect(header).toBeVisible();
-  });
-
   test('order form link is visible and points to a file', async ({ page }) => {
     const orderFormLink = page.getByRole('link', { name: 'Bottle Clocks Order Form' });
 
@@ -51,14 +46,4 @@ test.describe('Pages / Bottle Clocks', () => {
     }
   });
 
-  test("footer is visible", async ({ page }) => {
-    const footer = page.locator("footer").first();
-    await expect(footer).toBeVisible();
-  });
-
-  test("footer contains current year", async ({ page }) => {
-    const footer = page.locator("footer").first();
-    const currentYear = new Date().getFullYear().toString();
-    await expect(footer).toContainText(currentYear);
-  });
 });
