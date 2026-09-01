@@ -14,7 +14,7 @@
     "format:check": "prettier --config prettier.config.mjs --check ."
   },
   "dependencies": {
-    "@astrojs/netlify": "^8.2.2",
+    "@astrojs/netlify": "^8.2.4",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.4",
     "astro-embed": "^0.13.1",
