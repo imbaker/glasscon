@@ -16,7 +16,7 @@
   "dependencies": {
     "@astrojs/netlify": "^8.2.4",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.2.4",
+    "astro": "^7.2.9",
     "astro-embed": "^0.13.1",
     "astro-navbar": "^2.4.0",
     "sharp": "^0.35.3",
