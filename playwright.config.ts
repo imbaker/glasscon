@@ -33,7 +33,7 @@ export default defineConfig({
     { name: "pixel-8", use: { ...Pixel8 } },
   ],
   webServer: {
-    command: "pnpm preview",
+    command: "pnpm exec http-server dist -p 4321 --gzip -c-1",
     url: "http://localhost:4321",
     reuseExistingServer: !process.env.CI,
     timeout: 120000,
