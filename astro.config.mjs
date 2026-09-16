@@ -1,11 +1,25 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
+import icon from "astro-icon";
 import netlify from "@astrojs/netlify";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: "never",
+  integrations: [
+    icon({
+      include: {
+        mdi: [
+          "home",
+          "bottle-wine",
+          "phone",
+          "envelope-outline",
+          "alternate-email",
+        ],
+      },
+    }),
+  ],
   adapter: netlify(),
   fonts: [
     {
