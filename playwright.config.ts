@@ -16,8 +16,15 @@ export default defineConfig({
   expect: { timeout: 5000 },
   fullyParallel: true,
   reporter: [
+    ["list"],
     ["html", { outputFolder: "playwright-report" }],
-    ["junit", { outputFile: "test-results/results.xml" }],
+    [
+      "junit",
+      {
+        outputFile: "test-results/results.xml",
+        includeProjectInTestName: true,
+      },
+    ],
   ],
   use: {
     headless: true,
