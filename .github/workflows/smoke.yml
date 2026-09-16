@@ -31,6 +31,9 @@ jobs:
 
       - run: pnpm build
 
+      - name: Install Playwright dependencies
+        run: pnpm exec playwright install-deps
+
       - name: Cache Playwright browsers
         uses: actions/cache@v6
         id: playwright-cache
@@ -40,9 +43,7 @@ jobs:
 
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: |
-          pnpm exec playwright install-deps
-          pnpm exec playwright install
+        run: pnpm exec playwright install
 
       - name: Run Playwright smoke tests
         run: pnpm exec playwright test
