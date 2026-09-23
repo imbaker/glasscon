@@ -28,7 +28,7 @@
     "astro-icon": "^1.2.0",
     "http-server": "^14.1.1",
     "playwright": "^1.63.0",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.8",
     "prettier-plugin-astro": "^1.0.0",
     "prettier-plugin-tailwindcss": "^0.8.1"
   },
